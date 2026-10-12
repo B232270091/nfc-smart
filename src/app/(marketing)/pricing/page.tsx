@@ -1,0 +1,13 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowUpRight, Check, CircleHelp, Nfc } from "lucide-react";
+
+export const metadata: Metadata = { title: "Үнийн мэдээлэл | NFC Smart", description: "NFC Smart платформын багц болон үнийн мэдээлэл." };
+
+export default function PricingPage() {
+  return <>
+    <section className="marketing-container subpage-hero"><div className="eyebrow">ОЙЛГОМЖТОЙ ЭХЛЭЛ</div><h1>Таны бизнест<br /><span>тохирох боломж.</span></h1><p>Үйлчилгээний боломжуудтай танилцаад,<br className="desktop-break" /> өөрийн байгууллагын орон зайг үүсгээрэй.</p></section>
+    <section className="marketing-container pricing-section"><article className="pricing-card"><div className="pricing-intro"><span className="pricing-label"><Nfc size={16} /> NFC SMART PLATFORM</span><h2>Таны дижитал<br />ажлын орон зай.</h2><p>Дижитал меню, бизнесийн хуудас болон NFC картын нэгдсэн удирдлага.</p><div className="pricing-status">Үнэ хараахан зарлагдаагүй</div><p className="pricing-disclaimer">Багц, үнийн нөхцөл нийтлэгдээгүй байна. Энэ хувилбарт онлайн төлбөр хүлээн авахгүй.</p><Link href="/register" className="marketing-button">Бүртгэл үүсгэх <ArrowUpRight size={18} /></Link></div><div className="pricing-inclusions"><h3>Платформын үндсэн боломжууд</h3><ul className="marketing-check-list">{["Байгууллагын мэдээлэл, брэндийн тохиргоо", "Зурагтай дижитал меню", "Байгууллагын хуудас, нэрийн хуудас", "Нэгдсэн сошиал холбоосын хуудас", "NFC карт болон тогтмол холбоос", "Татаж авах QR код", "Картын хандалтын мэдээлэл", "Эзэмшигч, ажилтны хандалтын эрх"].map((text) => <li key={text}><Check size={17} />{text}</li>)}</ul><div className="pricing-hardware"><Nfc size={21} /><p><strong>Биет NFC карт</strong><br />Платформын бүртгэлд биет картын худалдан авалт, хүргэлт багтсан гэж үзэхгүй. NFC карт эсвэл тагийг тусад нь бэлтгэнэ.</p></div></div></article></section>
+    <section className="marketing-container faq-section"><div className="eyebrow"><CircleHelp size={15} /> ТҮГЭЭМЭЛ АСУУЛТ</div><h2>Эхлэхээсээ өмнө.</h2><div className="faq-grid"><article><h3>Төлбөрийн карт оруулах уу?</h3><p>Энэ хувилбарт төлбөрийн картын мэдээлэл авахгүй, төлбөр автоматаар суутгахгүй.</p></article><article><h3>NFC картгүй ашиглаж болох уу?</h3><p>Болно. Нийтэлсэн хуудсынхаа холбоос эсвэл QR кодыг шууд хуваалцаж болно.</p></article><article><h3>Мэдээллээ өөрчлөхөд картаа солих уу?</h3><p>Үгүй. Картын тогтмол холбоос хэвээр байх бөгөөд меню болон очих хуудсаа самбараас шинэчилнэ.</p></article><article><h3>Хэрэглэгч апп суулгах уу?</h3><p>Нийтэлсэн хуудас утасны вэб хөтөч дээр нээгдэнэ. Тусдаа апп суулгах шаардлагагүй.</p></article></div></section>
+  </>;
+}
