@@ -8,6 +8,7 @@ import type { Membership } from "@/lib/types";
 import { uploadAsset } from "@/lib/storage";
 import { withAction, type ActionState } from "@/lib/actions/shared";
 import { contentCopy as c } from "@/lib/content-copy";
+import { organizationProfileSchema } from "@/lib/organization-schema";
 
 const uuid = z.string().uuid(c.invalidInput);
 const shortText = z.string().trim().max(200, c.invalidInput);
@@ -52,13 +53,7 @@ export async function updateOrganization(_state: ActionState, form: FormData): P
   return withAction(async () => {
     const organizationId = uuid.parse(read(form, "organization_id"));
     const { supabase } = await requireOrg(organizationId, "owner");
-    const values = z.object({
-      name: shortText.min(2, c.invalidInput).max(120, c.invalidInput), slug, description: optionalText.max(4000, c.invalidInput),
-      phone: shortText.max(40), email, address: shortText.max(200),
-      maps_url: webUrl, facebook_url: webUrl, instagram_url: webUrl, website_url: webUrl,
-      primary_color: z.string().regex(/^#[0-9a-fA-F]{6}$/, c.invalidInput),
-      secondary_color: z.string().regex(/^#[0-9a-fA-F]{6}$/, c.invalidInput),
-    }).parse(Object.fromEntries(["name", "slug", "description", "phone", "email", "address", "maps_url", "facebook_url", "instagram_url", "website_url", "primary_color", "secondary_color"].map((key) => [key, read(form, key)])));
+    const values = organizationProfileSchema.parse(Object.fromEntries(["name", "slug", "description", "phone", "email", "address", "maps_url", "facebook_url", "instagram_url", "website_url", "primary_color", "secondary_color"].map((key) => [key, read(form, key)])));
     const logo = file(form, "logo");
     const cover = file(form, "cover");
     const images: { logo_path?: string; cover_path?: string } = {};
