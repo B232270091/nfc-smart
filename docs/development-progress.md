@@ -11,9 +11,18 @@
 - Локал шалгалт: TypeScript, lint (алдаагүй), production build амжилттай. Бодит migration дээр PGlite PostgreSQL 84 assertion амжилттай.
 - Supabase cloud төсөл байхгүй. Auth имэйл, cloud Storage болон бодит account session хараахан баталгаажаагүй.
 
+## Phase 2 — Байгууллага, нийтийн хуудсууд
+
+- Байгууллагын нэр, холбоо барих мэдээлэл, өнгө, logo/cover өөрчлөх.
+- Private Storage upload (file signature, MIME, 5 MiB), зөвхөн нийтлэгдсэн зурагт anonymous access.
+- Company, business card, links, menu page CRUD болон publication controls.
+- Published RPC ашигласан динамик public renderer, vCard таталт.
+- Owner-only багийн гишүүн болон explicit staff permission удирдлага.
+- TypeScript/build амжилттай; public helper/vCard болон core unit тест нийлээд 22 амжилттай (commit-уудын дагуу тестүүд нэмэгдэнэ).
+- Cloud upload/session E2E хараахан шалгаагүй.
+
 ## Дараагийн үе шатууд
 
-2. Байгууллагын брэндинг, нийтийн хуудсууд, багийн эрх.
 3. Дижитал меню, ангилал, барааны үнэ/эрэмбэ/нийтлэл.
 4. NFC карт, тогтмол URL, динамик чиглүүлэлт, QR.
 5. Админ, аналитик, интеграцийн тест, deployment заавар.
