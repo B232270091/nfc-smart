@@ -1,5 +1,13 @@
 # Аюулгүй байдал
 
+## Production хамгаалалтын одоогийн дүрэм
+
+`nfc-smart-production` (`xcsnkvoulmrpxoxcjuvl`) дээр зөвхөн унших inspection хийнэ. E2E guard нь production reference, зөрүүтэй URL/reference, өөрийн бус app server-ийг хориглоно. Тестийн тохиргоо `.env.e2e.local`-д тусдаа байна; production `.env.local`-ийг mutating runner ачаалахгүй. Server secret key production-д нэмээгүй. Шаардлагатай ажиллагаа болон deployment нь тусдаа зөвшөөрөлтэй байна.
+
+Build-ийн өмнө `scripts/check-environment.mjs` нь `NEXT_PUBLIC_` хувьсагчид secret key/service-role JWT байгаа эсэхийг шалгаж build-ийг зогсооно. Утгуудыг log-д хэвлэхгүй. Vercel-д байнгын холбоосын бодит HTTPS `NEXT_PUBLIC_APP_URL` шаарддаг.
+
+2026-10-14: `npm audit --omit=dev` — **0 vulnerability**. Бүх dependency audit-д Next ESLint → fast-glob → micromatch → braces гинжин хэлхээний **5 high development-only advisory** байна. Registry-ийн `braces` latest нь `3.0.3`; patched release хараахан гараагүй. Production runtime-д энэ гинжин хэлхээ ордоггүй. Compatibility эвдэх Next ESLint 14.x downgrade эсвэл `audit fix --force` хэрэглээгүй. Advisory-г patched compatible хувилбар гармагц шинэчилнэ.
+
 ## Итгэмжлэлийн хязгаар
 
 Browser-оос organization ID, resource ID, role, permission ирсэн нь эрхийн нотолгоо болохгүй. Next.js mutation бүр authenticated хэрэглэгчийг server дээр баталгаажуулж, байгууллагын role/permission шалгана. Supabase client session-аар хийсэн query дээр database RLS давхар шалгана. `user_metadata` authorization-д ашиглахгүй.

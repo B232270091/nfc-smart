@@ -1,5 +1,7 @@
 # Өгөгдлийн сан
 
+Одоогийн production төсөлд зөвхөн унших inspection зөвшөөрөгдсөн. Migration-ууд локалд versioned бөгөөд production-д хэрэгжүүлээгүй. `supabase/inspection.sql` нь schema/RLS/RPC/bucket-ийн зөвхөн metadata-г уншина.
+
 Supabase PostgreSQL 17 ашиглана. Бодит schema болон бүх эрхийн дүрэм `supabase/migrations/20261012111118_nfc_smart_initial.sql` дотор байна. Migration-ийг Supabase CLI-ээр үүсгэсэн. Docker болон cloud credentials-гүй үед ч уг SQL-ийг PostgreSQL/WASM PGlite дээр `npm run test:db` командаар шалгана.
 
 ## Бүтэц

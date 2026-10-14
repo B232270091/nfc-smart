@@ -32,11 +32,30 @@
 - TypeScript/build амжилттай; public helper/vCard болон core unit тест нийлээд 22 амжилттай (commit-уудын дагуу тестүүд нэмэгдэнэ).
 - Cloud upload/session E2E хараахан шалгаагүй.
 
-## Дараагийн үе шатууд
+## 2026-10-14 — Phase 3–5 болон production хамгаалалт
 
-3. Дижитал меню, ангилал, барааны үнэ/эрэмбэ/нийтлэл.
-4. NFC карт, тогтмол URL, динамик чиглүүлэлт, QR.
-5. Админ, аналитик, интеграцийн тест, deployment заавар.
+- **Phase 3:** ангилал болон хоолны CRUD, зураг upload, бүхэл MNT үнэ, эрэмбэ, availability/publication, хайлт/шүүлт, 50 мөрөөр хуудаслах dashboard хэрэгжсэн. Ангилал нэмэх dialog, устгах confirmation ашиглана. Public menu нь database-аас шинэ мэдээлэл уншина.
+- **Phase 4:** database-generated immutable 96-bit картын код, NFC бүртгэл/нэр/чиглэл/төлөв, байнгын URL, 307 no-store redirect, QR preview/copy/PNG download хэрэгжсэн. Draft/inactive/cross-tenant destination хаагдана. HEAD, bot, preview/prefetch хүсэлт analytics-д тоологдохгүй; analytics initialization/network алдаа redirect-ийг таслахгүй.
+- **Phase 5:** private platform_admins эрхтэй admin dashboard, байгууллага/гишүүний удирдлага, карт шилжүүлэх, paginated user search, organization filters, SQL analytics, өдрийн график ба хүртээмжтэй хүснэгт хэрэгжсэн. 1,005 event-ийн нийлбэр, timezone болон transfer history privacy-г бодит SQL тестээр баталсан.
+- Dashboard болон admin sidebar хураагдана; account dropdown, loading/error, native accessible dialog, light/dark, mobile navigation байна. 253 бичвэрийг `src/lib/messages/mn.ts`-д төвлөрүүлсэн. `getMessages('en')` нь хэсэгчилсэн орчуулга + Mongolian fallback; бүтэн English UI гэж тайлагнахгүй. Auth үйлдлийн логикийг сольсонгүй; зөвхөн display/error strings dictionary руу шилжсэн.
+- Тусдаа test project E2E бэлтгэсэн. Production project reference-г test guard хориглоно. Mutating тест нь production `.env.local`-ийг уншихгүй, өөрийн test env-тэй шинэ local server эхлүүлнэ; existing app server-ийг дахин ашиглахгүй.
+- CI нь credentials-гүй lint/type/unit/PGlite/build/public smoke ажиллуулах тохиргоотой. GitHub runner дээр бодитоор амжилттай болсон эсэх нь push дараах CI үр дүнгээр батлагдана.
+
+### Production төлөв
+
+- Хэрэглэгч `nfc-smart-production` (`xcsnkvoulmrpxoxcjuvl`)-ийг **зөвхөн унших** гэж заасан. Production-д schema/migration, хэрэглэгч, байгууллага, тестийн өгөгдөл өөрчлөөгүй. `SUPABASE_SECRET_KEY` нэмээгүй; `E2E_ENABLED=1` болгоогүй.
+- Нийтийн key ашигласан read-only `resolve_nfc_card` болон `get_public_page` readiness request хоёр `PGRST202` (RPC schema cache-д олдсонгүй) буцаасан. Энэ нь authentication ажиллахгүй гэсэн дүгнэлт биш. Migration history/full schema-г project operator [inspection.sql](../supabase/inspection.sql)-аар шалгаж болно.
+- Дөрвөн versioned migration бэлэн. Production-д хэрэгжүүлээгүй. Тусдаа тестийн орчны заавар: [test-environment.md](test-environment.md).
+- Live Auth/Storage/menu/NFC integration, нэвтэрсэн dashboard-ийн browser E2E, Vercel/custom domain, биет NFC тагийн уншуулалтыг баталгаажаагүй. Эдгээр нь гаднын орчны үлдсэн acceptance шалгалтууд.
+- Dependency audit: `braces` → `micromatch` → `fast-glob` → Next ESLint tooling гинжин хэлхээнд 5 high development-only advisory байна. Шийдэл нэрээр Next ESLint-ийг 14.x руу буулгаагүй. Production runtime audit-ийн дүнг final verification-д тусгана.
+
+### Эцсийн локал шалгалт
+
+- `npm.cmd run check` **амжилттай**: ESLint, TypeScript, 7 файл дахь **68 unit/server/guard тест**, дөрвөн migration хэрэгжүүлсэн **131 PostgreSQL integration/security assertion**, production build.
+- Edge/Playwright public smoke **5/5 амжилттай**: 390px/1440px бүх public/auth/setup дэлгэц overflow-гүй, mobile navigation, invalid NFC URL, signed-out dashboard/admin хамгаалалт, light/dark refresh persistence. Desktop home болон mobile login screenshot-ийг нүдээр хянасан.
+- Бодит Supabase E2E **ажиллуулаагүй**; disabled suite run-д нэг тест `skipped` гэж бүртгэгдсэн. Нэвтэрсэн dashboard/core flow production дээр туршигдсан гэж тайлагнахгүй.
+- `npm audit --omit=dev`: **0 vulnerability**. Dev-only 5 advisory дээр patched `braces` release байхгүй (registry latest 3.0.3).
+- `.env.local`, `.env.e2e.local` Git ignored; commit хийх source/docs/tests/migrations дотор credential-like token scan **0**. `.env.example` зөвхөн placeholder-той.
 
 GitHub: https://github.com/B232270091/nfc-smart (private).
 Vercel болон Supabase cloud deployment хийгдээгүй.

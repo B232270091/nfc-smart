@@ -36,6 +36,7 @@ where schemaname='public' and tablename in ('organizations','organization_member
 | `20261012111118_nfc_smart_initial.sql` | Урьд нь бэлтгэсэн foundation: organizations, memberships, атомик RPC, RLS, Storage, мөн menu/pages/cards зэрэг бусад үндсэн schema. |
 | `20261012154811_analytics_aggregates.sql` | Урьд нь бэлтгэсэн analytics schema. Phase 2 байгууллагын удирдлагад шууд шаардлагагүй боловч энэ checkout-д байвал CLI pending жагсаалтад орно. |
 | `20261013164143_organization_profile_hardening.sql` | Энэ Phase 2-ын нэмэлт: contact урт, хоосон нэр, canonical slug, credential агуулаагүй HTTPS URL constraint. |
+| `20261013200319_platform_user_pagination.sql` | Phase 5: зөвхөн trusted admin-д хэрэглэгчийг хайх, хуудаслах RPC; Auth өгөгдөл өөрчлөхгүй. |
 
 **Хүснэгтүүд байхгүй бол:** эхний migration нь хүснэгт болон owner RPC/RLS-ийг үүсгэнэ. Түүний бүрэн хүрээг эхлээд review хийнэ; зөвхөн нэг хэсгийг хуулж ажиллуулаад migration-ийг бүрэн applied гэж тэмдэглэж болохгүй.
 
