@@ -52,6 +52,8 @@ Server bot filtering ба database atomic rate limit давхар ажиллан
 
 ## Баталгаажуулалт ба production хязгаар
 
+E2E integration нь `.env.e2e.local`-ийг тусад нь explicitly ачаалж, `nfc-smart-test` нэр/ID болон өөр production reference-г баталгаажуулсан 24 цагийн локал receipt шаарддаг. Өөрчлөгдсөн түлхүүрээр хуучин receipt ашиглахгүй. Management token тестийн app-д дамжихгүй; production environment file өөрчлөгдөхгүй. Mutation/cleanup бүрийн эхэнд target-ийг шалгаж нэр/ID-г хэвлэнэ. Credential агуулж болох Playwright trace болон raw error/call logs integration үед унтарна. Дэлгэрэнгүй: [тестийн орчин](test-environment.md).
+
 `npm run test:db` бодит production migration-ийг PostgreSQL/WASM дээр ажиллуулж cross-tenant access, staff escalation, immutable identifiers, last-owner lock rules, foreign keys, public restrictions, storage policy, service-only scan logging болон trusted admin transfer-ийг шалгана. PGlite тест нь cloud Auth/Storage HTTP service эсвэл сүлжээний concurrency load test биш.
 
 Production-д шилжүүлэхдээ Supabase Security Advisor болон Performance Advisor, Auth redirect allowlist, email confirmation, SMTP, session configuration, backup/recovery, Vercel secret configuration-г шалгана. `.env`/cloud credentials байхгүй нөхцөлд live authentication, cloud migration, image serving болон deployed NFC routing-ийг амжилттай гэж үзэхгүй.

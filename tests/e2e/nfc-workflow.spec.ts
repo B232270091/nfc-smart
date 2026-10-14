@@ -1,7 +1,7 @@
 import { randomUUID } from "node:crypto";
 import { test, expect, type Page } from "@playwright/test";
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
-import { assertE2ETarget } from '../../scripts/e2e-safety.mjs';
+import { announceE2EMutation } from '../../scripts/e2e-safety.mjs';
 
 // This suite makes real Auth/Database/Storage requests. Use a dedicated test project.
 // Disabled runs are reported as skipped, never represented as integration passes.
@@ -24,7 +24,7 @@ async function login(page: Page, email: string, password: string) {
 async function findUser(admin: SupabaseClient, email: string) {
   for (let page = 1; page <= 100; page++) {
     const { data, error } = await admin.auth.admin.listUsers({ page, perPage: 1000 });
-    if (error) throw error;
+    if (error) throw new Error(`Auth lookup failed (HTTP ${error.status ?? 'unknown'}).`);
     const found = data.users.find((user) => user.email === email);
     if (found) return found.id;
     if (data.users.length < 1000) break;
@@ -33,11 +33,12 @@ async function findUser(admin: SupabaseClient, email: string) {
 }
 
 function dbSuccess(error: { message: string } | null) {
-  expect(error?.message ?? null).toBeNull();
+  // Do not copy API error bodies (which may include credentials) into reports.
+  expect(error === null, 'Supabase operation must succeed').toBe(true);
 }
 
 test("register → publish menu → reuse permanent NFC URL after edit → disable; tenants remain isolated", async ({ page, browser, baseURL }) => {
-  assertE2ETarget(process.env);
+  announceE2EMutation(process.env, 'create/update test fixtures');
   const url = required("NEXT_PUBLIC_SUPABASE_URL");
   const publishable = required("NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY");
   const secret = required("SUPABASE_SECRET_KEY");
@@ -56,8 +57,19 @@ test("register → publish menu → reuse permanent NFC URL after edit → disab
   const organizationIds: string[] = [];
   const visitor = await browser.newContext({ baseURL });
   const publicPage = await visitor.newPage();
+  let logoPath = '';
 
   try {
+    await test.step('Verify migrated tables and the private test Storage bucket before registration', async () => {
+      for (const table of ['organizations', 'organization_members', 'menu_categories', 'menu_items', 'pages', 'nfc_cards']) {
+        dbSuccess((await admin.from(table).select('*', { count: 'exact', head: true }).limit(0)).error);
+      }
+      const bucket = await admin.storage.getBucket('organization-assets');
+      dbSuccess(bucket.error);
+      expect(bucket.data?.public).toBe(false);
+      expect(Number(bucket.data?.file_size_limit)).toBe(5 * 1024 * 1024);
+      expect(bucket.data?.allowed_mime_types).toEqual(expect.arrayContaining(['image/png', 'image/jpeg', 'image/webp']));
+    });
     await test.step("Register through the real UI and confirm this test account", async () => {
       await page.goto("/register");
       await page.locator('input[name="email"]').fill(email);
@@ -94,6 +106,7 @@ test("register → publish menu → reuse permanent NFC URL after edit → disab
       const branding = await admin.from("organizations").select("logo_path,phone").eq("id", orgId).single();
       dbSuccess(branding.error);
       expect(branding.data!.logo_path).toMatch(new RegExp(`^${orgId}/branding/`));
+      logoPath = branding.data!.logo_path;
       expect(branding.data!.phone).toBe("99112233");
     });
 
@@ -162,7 +175,16 @@ test("register → publish menu → reuse permanent NFC URL after edit → disab
       await expect(card.getByRole("img", { name: `${cardName} QR`, exact: true })).toBeVisible();
       const downloadEvent = page.waitForEvent("download");
       await card.getByRole("link", { name: "QR татах", exact: true }).click();
-      expect((await downloadEvent).suggestedFilename()).toMatch(/\.png$/);
+      const download = await downloadEvent;
+      expect(download.suggestedFilename()).toMatch(/\.png$/);
+      const stream = await download.createReadStream();
+      expect(stream).not.toBeNull();
+      const chunks: Buffer[] = [];
+      for await (const chunk of stream!) chunks.push(Buffer.from(chunk));
+      const png = Buffer.concat(chunks);
+      expect(png.subarray(0, 8).toString('hex')).toBe('89504e470d0a1a0a');
+      expect(png.readUInt32BE(16)).toBe(600);
+      expect(png.readUInt32BE(20)).toBe(600);
       const response = await visitor.request.get(`/t/${code}`, { maxRedirects: 0 });
       expect([302, 303, 307]).toContain(response.status());
       expect(response.headers().location).toContain(`/p/${pageSlug}`);
@@ -208,6 +230,17 @@ test("register → publish menu → reuse permanent NFC URL after edit → disab
       const privateMembers = await otherClient.from("organization_members").select("user_id").eq("organization_id", orgId);
       dbSuccess(privateMembers.error);
       expect(privateMembers.data).toEqual([]);
+      const forbiddenDownload = await otherClient.storage.from('organization-assets').download(logoPath);
+      expect(forbiddenDownload.error).not.toBeNull();
+      const forbiddenUpload = await otherClient.storage.from('organization-assets').upload(
+        `${orgId}/branding/${randomUUID()}.png`, Buffer.from('forbidden'), { contentType: 'image/png' });
+      expect(forbiddenUpload.error).not.toBeNull();
+      const deniedDelete = await otherClient.from('menu_items').delete().eq('id', itemId).select('id');
+      dbSuccess(deniedDelete.error);
+      expect(deniedDelete.data).toEqual([]);
+      const preserved = await admin.from('menu_items').select('price_mnt').eq('id', itemId).single();
+      dbSuccess(preserved.error);
+      expect(Number(preserved.data!.price_mnt)).toBe(22000);
       const deniedBrowser = await browser.newContext({ baseURL });
       try {
         const otherPage = await deniedBrowser.newPage();
@@ -227,7 +260,28 @@ test("register → publish menu → reuse permanent NFC URL after edit → disab
       expect([404, 410]).toContain(response.status());
       expect(response.headers().location).toBeUndefined();
     });
+    await test.step('Owner deletes the menu item through the confirmation dialog', async () => {
+      announceE2EMutation(process.env, 'delete own test menu item');
+      await page.goto('/dashboard/menu');
+      const article = page.locator('article').filter({ has: page.getByRole('heading', { name: itemName, exact: true }) });
+      await article.getByRole('button', { name: 'Устгах', exact: true }).click();
+      await page.getByRole('dialog').getByRole('button', { name: 'Баталгаажуулах', exact: true }).click();
+      await expect(article).toHaveCount(0);
+      const deleted = await admin.from('menu_items').select('id').eq('id', itemId);
+      dbSuccess(deleted.error);
+      expect(deleted.data).toEqual([]);
+    });
+    await test.step('Logout removes access to protected organization pages', async () => {
+      await page.locator('.account-menu summary').click();
+      await page.locator('.account-menu').getByRole('button', { name: 'Гарах', exact: true }).click();
+      await expect(page).toHaveURL(/\/login$/);
+      await page.goto('/dashboard/menu');
+      await expect(page).toHaveURL(/\/login$/);
+    });
   } finally {
+    // Recheck the exact target before any sign-out, Storage remove, or row deletion.
+    announceE2EMutation(process.env, 'cleanup only this run');
+    test.setTimeout(test.info().timeout + 60_000);
     await visitor.close();
     await otherClient.auth.signOut();
     // Only exact, unique identifiers created by this test are ever deleted.
@@ -245,8 +299,14 @@ test("register → publish menu → reuse permanent NFC URL after edit → disab
       for (const table of ["nfc_cards", "menu_items", "pages", "menu_categories"]) dbSuccess((await admin.from(table).delete().eq("organization_id", organizationId)).error);
       dbSuccess((await admin.from("organizations").delete().eq("id", organizationId)).error);
     }
-    const registeredId = await findUser(admin, email);
-    if (registeredId && !users.includes(registeredId)) users.push(registeredId);
+    for (const testEmail of [email, otherEmail]) {
+      const registeredId = await findUser(admin, testEmail);
+      if (registeredId && !users.includes(registeredId)) users.push(registeredId);
+    }
     for (const userId of users) dbSuccess((await admin.auth.admin.deleteUser(userId)).error);
+    const remaining = await admin.from('organizations').select('id').in('slug', [orgSlug, otherSlug]);
+    dbSuccess(remaining.error);
+    expect(remaining.data).toEqual([]);
+    for (const testEmail of [email, otherEmail]) expect(await findUser(admin, testEmail)).toBeNull();
   }
 });

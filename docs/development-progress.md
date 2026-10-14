@@ -59,3 +59,13 @@
 
 GitHub: https://github.com/B232270091/nfc-smart (private).
 Vercel болон Supabase cloud deployment хийгдээгүй.
+
+## 2026-10-14 — Тусгаарласан E2E runner
+
+- `.env.e2e.local` Git ignored загвар үүсгэсэн; production `.env.local`-ийн өмнөх/дараах SHA-256 ижил. Production secret нэмээгүй, өгөгдөл өөрчлөөгүй.
+- Explicit test env loader, production reference denylist, modern key validation, Management API-аар test нэр/ID/organization баталгаажуулах read-only команд, 24 цагийн credential-bound verification receipt нэмсэн. Буруу/хоосон target-тай runner сервер эхлүүлэхээс өмнө зогсоно.
+- Тестийн сервер шинэ port 3100 процесс, `.next-e2e` build ашиглана. Inherited production API/analytics/database credentials болон Management token тестийн app-д орохгүй. Auth trace, screenshot, raw credential-bearing error logs integration үед унтарсан.
+- Бодит E2E workflow-д private bucket readiness, cross-tenant Storage download/upload/delete хориг, QR PNG signature/600px шалгалт, owner menu delete UI, logout, cleanup дараах exact test resource үлдэгдлийн шалгалт нэмсэн.
+- `npm run check` амжилттай: lint, TypeScript, **74 unit тест**, **131 PostgreSQL assertion**, production build. Public Playwright smoke **5/5**, exit 0; Windows sandbox-ийн teardown гацалтыг зөвхөн тухайн тестийн verified server process tree-г хааж шийдсэн.
+- **Cloud үлдсэн:** connector `projects: []`, CLI `AccessTokenRequiredError`; тестийн ID/URL/API keys локал файлд хараахан өгөөгүй. Иймээс test identity болон production/test URL ялгааг cloud-аар батлаагүй, migration/Storage setup хэрэгжүүлээгүй, бодит Auth/CRUD/NFC/tenant E2E/cleanup ажиллуулаагүй. Guard-ийн хоригийг integration pass гэж тооцоогүй.
+- Үргэлжлүүлэх тохиргоо болон migration дараалал: [test-environment.md](test-environment.md).

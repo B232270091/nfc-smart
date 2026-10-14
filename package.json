@@ -13,6 +13,8 @@
     "test": "vitest run",
     "test:db": "node scripts/test-database.mjs",
     "test:e2e": "playwright test",
+    "e2e:verify": "node scripts/verify-e2e.mjs",
+    "test:e2e:integration": "node scripts/run-e2e.mjs",
     "check": "npm run lint && npm run typecheck && npm test && npm run test:db && npm run build"
   },
   "dependencies": {

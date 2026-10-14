@@ -1,2 +1,12 @@
 export const productionProjectRef: string;
-export function assertE2ETarget(env: Record<string, string | undefined>): void;
+export const testProjectName: string;
+export const verificationPath: string;
+export type E2EEnv = Record<string, string | undefined>;
+export type Verification = { name: string; id: string; productionId: string; organizationId: string; fingerprint: string; verifiedAt: string };
+export type ProjectIdentity = { id: string; name: string; status: string; organization_id: string };
+export function verifyProjectIdentity(projects: ProjectIdentity[], ref: string): { target: ProjectIdentity; production: ProjectIdentity };
+export function targetFingerprint(env: E2EEnv): string;
+export function assertTestConfiguration(env: E2EEnv): void;
+export function readVerification(): Verification;
+export function assertE2ETarget(env: E2EEnv, receipt?: Verification, now?: number): void;
+export function announceE2EMutation(env: E2EEnv, operation: string): void;
