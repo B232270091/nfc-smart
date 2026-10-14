@@ -69,3 +69,10 @@ Vercel болон Supabase cloud deployment хийгдээгүй.
 - `npm run check` амжилттай: lint, TypeScript, **74 unit тест**, **131 PostgreSQL assertion**, production build. Public Playwright smoke **5/5**, exit 0; Windows sandbox-ийн teardown гацалтыг зөвхөн тухайн тестийн verified server process tree-г хааж шийдсэн.
 - **Cloud үлдсэн:** connector `projects: []`, CLI `AccessTokenRequiredError`; тестийн ID/URL/API keys локал файлд хараахан өгөөгүй. Иймээс test identity болон production/test URL ялгааг cloud-аар батлаагүй, migration/Storage setup хэрэгжүүлээгүй, бодит Auth/CRUD/NFC/tenant E2E/cleanup ажиллуулаагүй. Guard-ийн хоригийг integration pass гэж тооцоогүй.
 - Үргэлжлүүлэх тохиргоо болон migration дараалал: [test-environment.md](test-environment.md).
+
+### Test project ID өгсний дараах cloud шалгалт
+
+- `nfc-smart-test` = `khohnhjjyetwuzfsttkl`, `nfc-smart-production` = `xcsnkvoulmrpxoxcjuvl`, organization = `NFC Smart` / `fsmtzwmlrfkqdhjxciww` гэдгийг connector-ийн direct lookup-аар батлав. List хоосон байсан ч project-ID access болон migration эрх ажиллаж байна; reconnect одоогоор шаардахгүй.
+- Дөрвөн existing migration **зөвхөн test project-д хэрэгжсэн**. Remote migration history-г local versions-той тааруулж дахин уншсан. Production schema/data өөрчлөөгүй.
+- Test-ийн 9 application table бүгд RLS enabled, private 5 MiB `organization-assets` bucket болон дөрвөн Storage policy батлагдсан. Security Advisor ERROR/WARN байхгүй; хоёр private deny-by-default хүснэгтэд зөвхөн INFO байна. Тестийн application/Storage rows одоогоор 0.
+- Test URL/ref local `.env.e2e.local`-д хадгалсан; guard exact test ID-г pin хийсэн. Connector identity metadata 24 цаг хүчинтэй. Publishable/secret test keys байхгүй тул credential verification, бодит browser integration болон cleanup хүлээгдэж байна.

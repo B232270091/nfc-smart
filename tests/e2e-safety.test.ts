@@ -1,10 +1,10 @@
 import { expect, it } from 'vitest';
-import { assertE2ETarget, announceE2EMutation, productionProjectRef, targetFingerprint, verifyProjectIdentity, type Verification } from '../scripts/e2e-safety.mjs';
+import { assertE2ETarget, announceE2EMutation, productionProjectRef, testProjectRef, targetFingerprint, verifyProjectIdentity, type Verification } from '../scripts/e2e-safety.mjs';
 import { isolateTestEnvironment, readTestEnvironment } from '../scripts/e2e-environment.mjs';
 
 const testEnv = {
-  E2E_ENABLED: '1', E2E_SUPABASE_PROJECT_REF: 'abcdefghijklmnopqrst', E2E_SUPABASE_PROJECT_NAME: 'nfc-smart-test',
-  NEXT_PUBLIC_SUPABASE_URL: 'https://abcdefghijklmnopqrst.supabase.co',
+  E2E_ENABLED: '1', E2E_SUPABASE_PROJECT_REF: testProjectRef, E2E_SUPABASE_PROJECT_NAME: 'nfc-smart-test',
+  NEXT_PUBLIC_SUPABASE_URL: `https://${testProjectRef}.supabase.co`,
   NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: 'sb_publishable_unit_fixture', SUPABASE_SECRET_KEY: 'sb_secret_unit_fixture',
 };
 const now = Date.now();
@@ -32,6 +32,7 @@ it('rejects mismatched, unacknowledged and remote application targets', () => {
     { E2E_BASE_URL: 'https://nfc-production.example' }, { SUPABASE_SECRET_KEY: '' },
     { E2E_BASE_URL: 'http://127.0.0.1:3000' },
     { E2E_SUPABASE_PROJECT_NAME: 'nfc-smart-production' }, { SUPABASE_SECRET_KEY: 'legacy-jwt' },
+    { E2E_SUPABASE_PROJECT_REF: 'abcdefghijklmnopqrst', NEXT_PUBLIC_SUPABASE_URL: 'https://abcdefghijklmnopqrst.supabase.co' },
     { NEXT_PUBLIC_SUPABASE_URL: 'https://abcdefghijklmnopqrst.supabase.co/redirect' },
     { NEXT_PUBLIC_SUPABASE_URL: 'https://user@abcdefghijklmnopqrst.supabase.co' },
     { E2E_SUPABASE_PROJECT_REF: 'local', NEXT_PUBLIC_SUPABASE_URL: 'http://127.0.0.1:54321' },

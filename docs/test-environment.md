@@ -1,6 +1,6 @@
 # NFC Smart — тусгаарласан Supabase E2E
 
-Production: `nfc-smart-production` (`xcsnkvoulmrpxoxcjuvl`). Тестийн төсөл: `nfc-smart-test`. Production `.env.local` болон бодит өгөгдлийг өөрчлөхгүй. Тестийн өгөгдөл, migration, cleanup зөвхөн нэр болон ID нь баталгаажсан тестийн төсөлд хийгдэнэ. `supabase db reset --linked` ашиглахгүй.
+Production: `nfc-smart-production` (`xcsnkvoulmrpxoxcjuvl`). Тестийн төсөл: `nfc-smart-test` (`khohnhjjyetwuzfsttkl`), URL: `https://khohnhjjyetwuzfsttkl.supabase.co`. Хоёул `NFC Smart` organization (`fsmtzwmlrfkqdhjxciww`)-д байгааг connector-оор баталсан. Production `.env.local` болон бодит өгөгдлийг өөрчлөхгүй. Тестийн өгөгдөл, migration, cleanup зөвхөн энэ тестийн төсөлд хийгдэнэ. `supabase db reset --linked` ашиглахгүй.
 
 ## Тохиргоо
 
@@ -8,8 +8,8 @@ Git-д орохгүй `.env.e2e.local` файлыг repo root-д үүсгэсэ�
 
 ```dotenv
 E2E_SUPABASE_PROJECT_NAME=nfc-smart-test
-E2E_SUPABASE_PROJECT_REF=
-NEXT_PUBLIC_SUPABASE_URL=
+E2E_SUPABASE_PROJECT_REF=khohnhjjyetwuzfsttkl
+NEXT_PUBLIC_SUPABASE_URL=https://khohnhjjyetwuzfsttkl.supabase.co
 NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=
 SUPABASE_SECRET_KEY=
 NEXT_PUBLIC_APP_URL=http://127.0.0.1:3100
@@ -19,7 +19,7 @@ SUPABASE_ACCESS_TOKEN=
 
 - Project reference: тестийн Dashboard → Settings → General дахь ID. URL нь яг `https://<test-reference>.supabase.co` байна.
 - API Keys: `sb_publishable_…`, `sb_secret_…` гэсэн шинэ түлхүүрүүд. Legacy JWT key энэ E2E runner-д зөвшөөрөгдөхгүй. Secret нь тестийн хэрэглэгчийг баталгаажуулах/цэвэрлэх, private Storage delivery-д хэрэгтэй; production-д нэмэхгүй.
-- `SUPABASE_ACCESS_TOKEN` нь Management API-аас төслийн нэр/ID-г **унших** verification-д ашиглах optional локал token. Shell environment-д өгч болно; browser болон Next серверт дамжуулахгүй. Supabase connector хоёр төслийг хардаг бол агент энэ token-гүйгээр project identity-г баталгаажуулж болно. Verification receipt-ийг гараар зохиож болохгүй.
+- `SUPABASE_ACCESS_TOKEN` нь Management API-аас төслийн нэр/ID-г **унших** verification-д ашиглах optional локал token. Одоогоор шаардахгүй: connector-оор хоёр төслийг ID-аар шалгаж, credential агуулаагүй `.local/e2e-project-identity.json` metadata хадгалсан. Энэ 24 цагийн metadata байгаа үед `e2e:verify` нэмэлт Management token-гүйгээр test API keys-ийг шалгана. Metadata/receipt-ийг гараар зохиож болохгүй. Хугацаа дуусвал agent connector-оор дахин батална, эсвэл local Management token ашиглана; token browser болон Next серверт дамжихгүй.
 - `ANALYTICS_HMAC_SECRET` optional. Local E2E нь Vercel-ийн trusted IP analytics-ийг батлахгүй.
 
 `.env.e2e.local` файлыг Next.js өөрөө ачаална гэж тооцохгүй. `scripts/e2e-environment.mjs` файлыг explicitly parse хийж, test URL/key-г inherited shell production утгуудаас давуугаар онооно. Дутуу test key-г production-оос нөхөхгүй. Production-оос ирж болох service key, analytics key, Management token болон database environment-уудыг тестийн child process-д хоослоно. `.env.local` зөвхөн ялгаатай URL/key шалгахад уншигдана; өөрчлөгдөхгүй.
@@ -30,7 +30,7 @@ SUPABASE_ACCESS_TOKEN=
 npm.cmd run e2e:verify
 ```
 
-Энэ команд өгөгдөл өөрчлөхгүй. Management API-аас хоёр төслийн нэр, ID, ижил organization, test төслийн ACTIVE_HEALTHY төлөвийг шалгана. Test URL руу read-only Auth requests явуулж publishable/secret key тохирч буйг батална. Production URL/ref-ээс ялгаатайг шалгаж, зөвхөн нэр болон ID-г log-д хэвлэнэ. Key, user rows, API response body хэвлэхгүй.
+Энэ команд өгөгдөл өөрчлөхгүй. Management token байвал хоёр төслийг ID-аар шууд уншина; үгүй бол connector-оор саяхан баталсан metadata ашиглана. Нэр, ID, ижил organization, test төслийн ACTIVE_HEALTHY төлөвийг шалгана. Test URL руу read-only Auth requests явуулж publishable/secret key тохирч буйг батална. Production URL/ref-ээс ялгаатайг шалгаж, зөвхөн нэр болон ID-г log-д хэвлэнэ. Key, user rows, API response body хэвлэхгүй. Guard нь зөвхөн `khohnhjjyetwuzfsttkl` reference-г зөвшөөрнө.
 
 Амжилттай бол Git ignored `.local/e2e-target.json` дотор нэр/ID, verification timestamp болон key fingerprint хадгална; raw credential хадгалахгүй. Энэ нь локал operator-ийн итгэмжлэгдсэн тохиргоо бөгөөд cryptographic remote attestation биш. 24 цагийн дараа эсвэл test URL/key өөрчлөгдвөл дахин verify хийнэ. Хоосон, хуучирсан, буруу нэртэй receipt-ээр тест эхлэхгүй. Verification дангаараа E2E suite асаахгүй.
 
@@ -79,8 +79,16 @@ npm.cmd run test:e2e -- tests/e2e/public-smoke.spec.ts
 
 Unit болон PGlite PostgreSQL нь Supabase руу холбогдохгүй. Smoke нь mutation form submit хийхгүй. Disabled/blocked integration-ийг pass гэж тайлагнахгүй.
 
-## 2026-10-14-ний энэ сессийн төлөв
+## 2026-10-15-ны энэ сессийн төлөв
 
-User хоёр төслийг үүсгэсэн гэж мэдээлсэн. Connector `projects: []` буцаасан; CLI `AccessTokenRequiredError` өгсөн. Test project reference болон API keys локал файлд хараахан байхгүй. Иймээс test нэр/ID, хоёр cloud URL-ийн ялгаа, cloud migrations, Auth/Storage болон бодит cleanup **хараахан баталгаажаагүй / ажиллаагүй**. Хоосон тохиргоотой verify/integration command сервер болон mutation эхлэхээс өмнө амжилттай хориглогдсон. Production `.env.local` hash хэвээр.
+Connector-ийн project list хоосон боловч user өгсөн ID-аар `get_project`, organization metadata, read-only SQL болон migration apply бүгд ажилласан. Иймээс дахин холбох шаардлага одоогоор алга; account-wide discovery-г төслийн хандалтгүй гэж дүгнэж болохгүй. CLI login token шаардах боловч connector migration-д CLI ашиглаагүй.
 
-Эх сурвалж: [Supabase modern API keys](https://supabase.com/docs/guides/getting-started/migrating-to-new-api-keys), [Management API project list](https://supabase.com/docs/reference/api/v1-list-all-projects). Next.js environment load order болон testing зааврыг суусан package-ийн `node_modules/next/dist/docs/`-оос шалгасан.
+`nfc-smart-test` нэр/ID/URL, production-оос ялгаатай reference, ижил NFC Smart organization батлагдсан. Дөрвөн migration зөвхөн тестийн төсөлд хэрэгжсэн. MCP үүсгэсэн timestamp history-г яг хэрэгжсэн SQL файлын дөрвөн local version-той нэр/хуучин version-оор нарийвчлан тулгаж тааруулсан; remote history одоо дээрх дөрвөн version-той ижил. Schema-г дахин хэрэгжүүлээгүй, reset хийгээгүй.
+
+Read-only шалгалт: application-ийн 9 хүснэгт бүгд RLS enabled; `organization-assets` private, 5 MiB, зөв MIME-тай, SELECT/INSERT/UPDATE/DELETE дөрвөн Storage policy байна. Application болон Storage test өгөгдөл одоогоор 0. Урьд байсан ашиглаагүй `menu-images` bucket-ийг өөрчлөөгүй. Security Advisor ERROR/WARN илрүүлээгүй; `private.platform_admins`, `private.scan_rate_limits` дээр зориудаар шууд хандалтыг хаасан RLS-no-policy INFO хоёр тэмдэглэл байна ([тайлбар](https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy)).
+
+Test API keys локал файлд хараахан өгөөгүй тул read-only key verification болон бодит Auth/CRUD/NFC/Storage E2E/cleanup **ажиллаагүй**. Тестийн suite идэвхгүй хэвээр. Production `.env.local` hash өөрчлөгдөөгүй; production-д metadata уншихаас бусад үйлдэл хийгээгүй.
+
+Cloud read-only privilege шалгалтаар anonymous хэрэглэгч organization/member/menu/private-admin хүснэгт уншихгүй, authenticated хэрэглэгч membership-д шууд INSERT хийхгүй, public page/NFC projection RPC нээлттэй, `record_scan` зөвхөн service role-д зөвшөөрөгдсөнийг баталсан. Энэ нь бодит хоёр tenant-ийн browser integration-ийг орлохгүй.
+
+Эх сурвалж: [Supabase modern API keys](https://supabase.com/docs/guides/getting-started/migrating-to-new-api-keys), [Management API project lookup](https://supabase.com/docs/reference/api/v1-get-project). Next.js environment load order болон testing зааврыг суусан package-ийн `node_modules/next/dist/docs/`-оос шалгасан.

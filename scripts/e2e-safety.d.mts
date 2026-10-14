@@ -1,5 +1,6 @@
 export const productionProjectRef: string;
 export const testProjectName: string;
+export const testProjectRef: string;
 export const verificationPath: string;
 export type E2EEnv = Record<string, string | undefined>;
 export type Verification = { name: string; id: string; productionId: string; organizationId: string; fingerprint: string; verifiedAt: string };

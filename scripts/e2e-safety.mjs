@@ -3,12 +3,13 @@ import { readFileSync } from 'node:fs';
 
 export const productionProjectRef = 'xcsnkvoulmrpxoxcjuvl';
 export const testProjectName = 'nfc-smart-test';
+export const testProjectRef = 'khohnhjjyetwuzfsttkl';
 export const verificationPath = '.local/e2e-target.json';
 
 export function verifyProjectIdentity(projects, ref) {
   const target = projects.find(p => p.id === ref);
   const production = projects.find(p => p.id === productionProjectRef);
-  if (ref === productionProjectRef || !target || target.name !== testProjectName || target.status !== 'ACTIVE_HEALTHY' ||
+  if (ref !== testProjectRef || !target || target.name !== testProjectName || target.status !== 'ACTIVE_HEALTHY' ||
       !production || production.name !== 'nfc-smart-production' ||
       !target.organization_id || target.organization_id !== production.organization_id) {
     throw new Error('Both project names, distinct IDs, shared organization, and healthy test status must be verified through Supabase.');
@@ -31,6 +32,7 @@ export function assertTestConfiguration(env) {
   if (!/^[a-z]{20}$/.test(ref || '') || env.NEXT_PUBLIC_SUPABASE_URL !== `https://${ref}.supabase.co`) {
     throw new Error('A separate hosted test project reference and matching canonical HTTPS URL are required.');
   }
+  if (ref !== testProjectRef) throw new Error('Only the verified nfc-smart-test project reference is permitted.');
   if (env.E2E_SUPABASE_PROJECT_NAME !== testProjectName) throw new Error('Only nfc-smart-test is permitted.');
   if (env.E2E_BASE_URL) throw new Error('E2E_BASE_URL is forbidden for integration tests; start an isolated server.');
   if (!/^sb_publishable_[A-Za-z0-9_-]+$/.test(env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || '') ||
