@@ -1,3 +1,4 @@
+import { messages } from '@/lib/messages/mn';
 import 'server-only';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
@@ -16,7 +17,7 @@ export async function requireUser() {
 }
 export async function requireOrg(orgId?: string, permission?: Permission | 'owner') {
   const { supabase, user } = await requireUser();
-  if (orgId && !organizationIdSchema.safeParse(orgId).success) throw new Error('Байгууллагын дугаар буруу байна.');
+  if (orgId && !organizationIdSchema.safeParse(orgId).success) throw new Error(messages.libAuth.message);
   const cookieId = (await cookies()).get('active_org')?.value;
   const active = orgId || (organizationIdSchema.safeParse(cookieId).success ? cookieId : undefined);
   let query = supabase.from('organization_members').select('*').eq('user_id', user.id).order('organization_id');
@@ -28,12 +29,12 @@ export async function requireOrg(orgId?: string, permission?: Permission | 'owne
     data = fallback.data;
     error = fallback.error;
   }
-  if (error) throw new Error('Байгууллагын эрхийг шалгаж чадсангүй.');
-  if (!data) { if (orgId) throw new Error('Хандах эрх хүрэлцэхгүй.'); redirect('/dashboard/organizations'); }
+  if (error) throw new Error(messages.libAuth.message2);
+  if (!data) { if (orgId) throw new Error(messages.libAuth.message3); redirect('/dashboard/organizations'); }
   const membership = data as Membership;
-  if (!canManage(membership, permission)) throw new Error('Энэ үйлдлийг хийх эрх хүрэлцэхгүй.');
+  if (!canManage(membership, permission)) throw new Error(messages.libAuth.message4);
   const { data: organization, error: orgError } = await supabase.from('organizations').select('*').eq('id', membership.organization_id).single();
-  if (orgError || !organization) throw new Error('Байгууллага олдсонгүй.');
+  if (orgError || !organization) throw new Error(messages.libAuth.message5);
   return { supabase, user, organization: organization as Organization, membership };
 }
 export async function requireAdmin() {

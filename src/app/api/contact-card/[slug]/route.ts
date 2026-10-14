@@ -1,3 +1,4 @@
+import { messages } from '@/lib/messages/mn';
 import { contentText, getPublicPage, safeEmail, safePhone } from "@/components/marketing/public-data";
 import { safeWebUrl } from "@/lib/utils";
 
@@ -27,7 +28,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ slu
   const { slug } = await params;
   const data = await getPublicPage(slug);
   const headers = { "Cache-Control": "no-store, max-age=0", "X-Content-Type-Options": "nosniff" };
-  if (!data || data.page.type !== "business_card") return new Response("Контакт олдсонгүй.", { status: 404, headers });
+  if (!data || data.page.type !== "business_card") return new Response(messages.appApiContactCardSlugRoute.message, { status: 404, headers });
   const name = contentText(data.page.content, "person_name") || data.page.title;
   const position = contentText(data.page.content, "position");
   const phone = contentText(data.page.content, "phone") || data.organization.phone || "";

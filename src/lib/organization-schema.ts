@@ -1,20 +1,21 @@
+import { messages } from '@/lib/messages/mn';
 import { z } from 'zod';
-export const organizationIdSchema = z.uuid('Байгууллагын дугаар буруу байна.');
-export const organizationSlugSchema = z.string().trim().min(3, 'Хаягийн нэр 3-аас доошгүй тэмдэгттэй байна.').max(80, 'Хаягийн нэр 80 хүртэл тэмдэгттэй байна.').regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, 'Жижиг латин үсэг, тоо, дунд зураас ашиглана уу.');
+export const organizationIdSchema = z.uuid(messages.libOrganizationSchema.message);
+export const organizationSlugSchema = z.string().trim().min(3, messages.libOrganizationSchema.message2).max(80, messages.libOrganizationSchema.message3).regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, messages.libOrganizationSchema.message4);
 export const createOrganizationSchema = z.object({
-  name: z.string().trim().min(2, 'Байгууллагын нэр 2-оос доошгүй тэмдэгттэй байна.').max(120, 'Байгууллагын нэр 120 хүртэл тэмдэгттэй байна.'),
+  name: z.string().trim().min(2, messages.libOrganizationSchema.message5).max(120, messages.libOrganizationSchema.message6),
   slug: organizationSlugSchema,
 });
-const optionalUrl = z.string().trim().max(2048, 'Холбоос хэт урт байна.').refine(value => {
+const optionalUrl = z.string().trim().max(2048, messages.libOrganizationSchema.message7).refine(value => {
   if (!value) return true;
   try { const url = new URL(value); return url.protocol === 'https:' && !!url.hostname && !url.username && !url.password; } catch { return false; }
-}, 'Нэвтрэх мэдээлэл агуулаагүй https:// холбоос оруулна уу.');
+}, messages.libOrganizationSchema.message8);
 export const organizationProfileSchema = createOrganizationSchema.extend({
-  description: z.string().trim().max(4000, 'Тайлбар 4000 хүртэл тэмдэгттэй байна.'),
-  phone: z.string().trim().max(40, 'Утасны дугаар хэт урт байна.'),
-  email: z.union([z.literal(''), z.email('И-мэйл хаягаа шалгана уу.').max(254)]),
-  address: z.string().trim().max(200, 'Хаяг 200 хүртэл тэмдэгттэй байна.'),
+  description: z.string().trim().max(4000, messages.libOrganizationSchema.message9),
+  phone: z.string().trim().max(40, messages.libOrganizationSchema.message10),
+  email: z.union([z.literal(''), z.email(messages.libOrganizationSchema.message11).max(254)]),
+  address: z.string().trim().max(200, messages.libOrganizationSchema.message12),
   maps_url: optionalUrl, facebook_url: optionalUrl, instagram_url: optionalUrl, website_url: optionalUrl,
-  primary_color: z.string().regex(/^#[0-9a-fA-F]{6}$/, 'Өнгөний код буруу байна.'),
-  secondary_color: z.string().regex(/^#[0-9a-fA-F]{6}$/, 'Өнгөний код буруу байна.'),
+  primary_color: z.string().regex(/^#[0-9a-fA-F]{6}$/, messages.libOrganizationSchema.message13),
+  secondary_color: z.string().regex(/^#[0-9a-fA-F]{6}$/, messages.libOrganizationSchema.message14),
 });

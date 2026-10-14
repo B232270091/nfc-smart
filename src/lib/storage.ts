@@ -1,3 +1,4 @@
+import { messages } from '@/lib/messages/mn';
 import type { SupabaseClient } from '@supabase/supabase-js';
 export function assetUrl(path:string|null|undefined){return path?`/api/assets/${path.split('/').map(encodeURIComponent).join('/')}`:'';}
 export function imageType(bytes:Uint8Array):'png'|'jpg'|'webp'|null {
@@ -8,9 +9,9 @@ export function imageType(bytes:Uint8Array):'png'|'jpg'|'webp'|null {
   return null;
 }
 export async function uploadAsset(supabase:SupabaseClient,orgId:string,file:File,scope:'branding'|'menu'|'pages'='menu'):Promise<string>{
-  if(file.size===0||file.size>5*1024*1024)throw new Error('Зураг 5 MB-аас бага хэмжээтэй байна.');
+  if(file.size===0||file.size>5*1024*1024)throw new Error(messages.libStorage.message);
   const bytes=new Uint8Array(await file.arrayBuffer());const extension=imageType(bytes);const mime={png:'image/png',jpg:'image/jpeg',webp:'image/webp'};
-  if(!extension||file.type!==mime[extension])throw new Error('Зөвхөн PNG, JPEG, WebP зургийг зөвшөөрнө.');
+  if(!extension||file.type!==mime[extension])throw new Error(messages.libStorage.message2);
   const path=`${orgId}/${scope}/${crypto.randomUUID()}.${extension}`;
-  const {error}=await supabase.storage.from('organization-assets').upload(path,bytes,{contentType:mime[extension],upsert:false});if(error)throw new Error('Зураг байршуулахад алдаа гарлаа. Эрх болон Storage тохиргоог шалгана уу.');return path;
+  const {error}=await supabase.storage.from('organization-assets').upload(path,bytes,{contentType:mime[extension],upsert:false});if(error)throw new Error(messages.libStorage.message3);return path;
 }

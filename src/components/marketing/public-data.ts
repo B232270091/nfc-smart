@@ -1,3 +1,4 @@
+import { messages } from '@/lib/messages/mn';
 import "server-only";
 import { cache } from "react";
 import { createClient } from "@/lib/supabase/server";
@@ -21,7 +22,7 @@ export const getPublicPage = cache(async (slug: string): Promise<PublicPageData 
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug) || slug.length > 80 || !hasSupabase()) return null;
   const client = await createClient();
   const { data, error } = await client.rpc("get_public_page", { p_slug: slug });
-  if (error) throw new Error("Нийтэлсэн хуудсыг ачаалж чадсангүй.");
+  if (error) throw new Error(messages.componentsMarketingPublicData.message);
   return data as PublicPageData | null;
 });
 
