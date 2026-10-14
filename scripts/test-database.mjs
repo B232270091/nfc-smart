@@ -225,6 +225,57 @@ try {
   await as('authenticated', ownerA, () => rejects(() => db.query("select public.create_organization('Atomic failure','atomic-failure')"), /test enrollment failure/, 'Forced owner insert failure reaches caller'));
   eq(await scalar("select count(*)::int from public.organizations where slug='atomic-failure'"), 0, 'Failed owner enrollment rolls back organization insert');
   await db.exec('drop trigger test_reject_owner on public.organization_members; drop function private.test_reject_owner();');
+  // Phase 5: verify aggregates with real SQL, including the post-transfer privacy boundary.
+  const today = await scalar("select (now() at time zone 'Asia/Ulaanbaatar')::date::text");
+  await as('anon', null, () => rejects(() => db.query('select public.get_analytics($1,$2,$2)', [orgA,today]), /permission denied/, 'Anonymous cannot call analytics aggregates'));
+  await as('authenticated', staff, () => rejects(() => db.query('select public.get_analytics($1,$2,$2)', [orgA,today]), /Analytics permission required/, 'Menu staff cannot call analytics aggregates'));
+  await as('authenticated', ownerB, () => rejects(() => db.query('select public.get_analytics($1,$2,$2)', [orgA,today]), /Analytics permission required/, 'Owner cannot aggregate another tenant'));
+  await as('authenticated', ownerA, async () => {
+    await rejects(() => db.query('select public.get_analytics(null,$1,$1)', [today]), /Analytics permission required/, 'Owner cannot aggregate the platform');
+    await rejects(() => db.query("select public.get_analytics($1,'2026-01-02','2026-01-01')", [orgA]), /Date range/, 'Reversed analytics dates rejected');
+    await rejects(() => db.query("select public.get_analytics($1,'2025-01-01','2026-01-02')", [orgA]), /Date range/, 'Oversized analytics ranges rejected');
+    const report = await scalar('select public.get_analytics($1,$2,$2)', [orgA,today]);
+    eq(report.totals.opens, 2, 'Aggregate counts original tenant history');
+    eq(report.totals.qr, 1, 'QR-attributed opens aggregated separately');
+    eq(report.totals.unknown, 1, 'Unmarked opens are unknown, not claimed NFC taps');
+    eq(report.days.length, 1, 'Inclusive day interval returned');
+    eq(report.cards[0].name, null, 'Previous owner cannot see transferred card name');
+    eq(report.cards[0].code, null, 'Previous owner cannot see transferred card code');
+    eq(report.totals.active_cards + report.totals.inactive_cards, 0, 'Transferred card absent from old tenant inventory');
+  });
+  await as('authenticated', ownerB, async () => {
+    const report = await scalar('select public.get_analytics($1,$2,$2)', [orgB,today]);
+    eq(report.totals.opens, 0, 'New tenant cannot aggregate old tenant history');
+    eq(report.totals.inactive_cards, 1, 'Disabled transferred card appears in new inventory');
+  });
+  // 1,005 events prove totals are computed in SQL, not a capped REST result set.
+  await db.query("insert into public.scan_events(organization_id,card_id,source,created_at) select $1,$2,'qr','2026-01-01T16:30:00Z'::timestamptz from generate_series(1,1005)", [orgB,card.id]);
+  await as('authenticated', ownerB, async () => {
+    const report = await scalar("select public.get_analytics($1,'2026-01-01','2026-01-03')", [orgB]);
+    eq(report.totals.opens, 1005, 'Aggregates are not truncated at 1,000 events');
+    eq(report.days.map(day => day.opens), [0,1005,0], 'Ulaanbaatar timezone and zero-filled days are correct');
+    eq(report.cards[0].opens, 1005, 'Per-card totals match aggregate');
+    eq(report.organizations[0].opens, 1005, 'Per-organization totals match aggregate');
+  });
+  await as('authenticated', admin, async () => {
+    const report = await scalar("select public.get_analytics(null,'2026-01-01','2026-01-03')");
+    eq(report.totals.opens, 1005, 'Trusted admin can aggregate across organizations');
+    eq(report.organization_count, 3, 'Admin organization count includes empty workspaces');
+  });
+  await as('anon', null, () => rejects(() => db.query('select public.search_platform_users()'), /permission denied/, 'Anonymous cannot search platform users'));
+  await as('authenticated', ownerA, () => rejects(() => db.query('select public.search_platform_users()'), /Platform admin required/, 'Owner cannot enumerate platform users'));
+  await as('authenticated', admin, async () => {
+    const first = await scalar("select public.search_platform_users('',0,2)");
+    const second = await scalar("select public.search_platform_users('',2,2)");
+    eq(first.count, 4, 'Admin search count includes all matching users');
+    eq(first.users.length, 2, 'Admin users page size respected');
+    eq(new Set([...first.users,...second.users].map(u => u.id)).size, 4, 'Admin pagination is stable and non-overlapping');
+    const filtered = await scalar("select public.search_platform_users('OWNER-A',0,50)");
+    eq(filtered.count, 1, 'Admin user search is case-insensitive');
+    eq(filtered.users[0].id, ownerA, 'Admin query returns matching user');
+    await rejects(() => db.query("select public.search_platform_users('',-1,50)"), /Invalid pagination/, 'Negative admin pagination rejected');
+    await rejects(() => db.query("select public.search_platform_users('',0,101)"), /Invalid pagination/, 'Admin search result size bounded');
+  });
   console.log(`PASS: ${assertions} database integration/security assertions.`);
 } finally {
   await db.close();
