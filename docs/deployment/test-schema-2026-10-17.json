@@ -1,0 +1,3394 @@
+{
+  "grants": [
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "menu_categories",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "menu_categories",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "menu_categories",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "menu_categories",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "menu_categories",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "menu_categories",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "menu_categories",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "REFERENCES",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "menu_categories",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "menu_categories",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "TRIGGER",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "menu_categories",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "TRUNCATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "menu_categories",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "menu_items",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "menu_items",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "menu_items",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "menu_items",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "menu_items",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "menu_items",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "menu_items",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "REFERENCES",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "menu_items",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "menu_items",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "TRIGGER",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "menu_items",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "TRUNCATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "menu_items",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "nfc_cards",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "nfc_cards",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "nfc_cards",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "nfc_cards",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "nfc_cards",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "nfc_cards",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "nfc_cards",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "REFERENCES",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "nfc_cards",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "nfc_cards",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "TRIGGER",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "nfc_cards",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "TRUNCATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "nfc_cards",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "organization_members",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "organization_members",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "organization_members",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "organization_members",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "REFERENCES",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "organization_members",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "organization_members",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "TRIGGER",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "organization_members",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "TRUNCATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "organization_members",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "organizations",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "organizations",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "organizations",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "organizations",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "organizations",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "REFERENCES",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "organizations",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "organizations",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "TRIGGER",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "organizations",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "TRUNCATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "organizations",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "pages",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "pages",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "pages",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "pages",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "pages",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "pages",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "pages",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "REFERENCES",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "pages",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "pages",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "TRIGGER",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "pages",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "TRUNCATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "pages",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "scan_events",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "scan_events",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "scan_events",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "scan_events",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "REFERENCES",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "scan_events",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "scan_events",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "TRIGGER",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "scan_events",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "TRUNCATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "postgres",
+      "table_name": "scan_events",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "anon",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "anon",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "anon",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "anon",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "REFERENCES",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "TRIGGER",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "TRUNCATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "anon",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_analytics",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "anon",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_analytics",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "anon",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_analytics",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "anon",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_analytics",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_analytics",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_analytics",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_analytics",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_analytics",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_analytics",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_analytics",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_analytics",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "REFERENCES",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_analytics",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_analytics",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "TRIGGER",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_analytics",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "TRUNCATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_analytics",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "anon",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_vectors",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_vectors",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_vectors",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "anon",
+      "grantor": "supabase_storage_admin",
+      "table_name": "objects",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "anon",
+      "grantor": "supabase_storage_admin",
+      "table_name": "objects",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "anon",
+      "grantor": "supabase_storage_admin",
+      "table_name": "objects",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "anon",
+      "grantor": "supabase_storage_admin",
+      "table_name": "objects",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "supabase_storage_admin",
+      "table_name": "objects",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "supabase_storage_admin",
+      "table_name": "objects",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "supabase_storage_admin",
+      "table_name": "objects",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "supabase_storage_admin",
+      "table_name": "objects",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "objects",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "objects",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "objects",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "REFERENCES",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "objects",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "objects",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "TRIGGER",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "objects",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "TRUNCATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "objects",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "anon",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "REFERENCES",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "TRIGGER",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "TRUNCATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "anon",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads_parts",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads_parts",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads_parts",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads_parts",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads_parts",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "REFERENCES",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads_parts",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads_parts",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "TRIGGER",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads_parts",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "TRUNCATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads_parts",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "anon",
+      "grantor": "supabase_storage_admin",
+      "table_name": "vector_indexes",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "supabase_storage_admin",
+      "table_name": "vector_indexes",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "vector_indexes",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    }
+  ],
+  "tables": [
+    {
+      "rls": true,
+      "name": "platform_admins",
+      "schema": "private",
+      "force_rls": false
+    },
+    {
+      "rls": true,
+      "name": "scan_rate_limits",
+      "schema": "private",
+      "force_rls": false
+    },
+    {
+      "rls": true,
+      "name": "menu_categories",
+      "schema": "public",
+      "force_rls": false
+    },
+    {
+      "rls": true,
+      "name": "menu_items",
+      "schema": "public",
+      "force_rls": false
+    },
+    {
+      "rls": true,
+      "name": "nfc_cards",
+      "schema": "public",
+      "force_rls": false
+    },
+    {
+      "rls": true,
+      "name": "organization_members",
+      "schema": "public",
+      "force_rls": false
+    },
+    {
+      "rls": true,
+      "name": "organizations",
+      "schema": "public",
+      "force_rls": false
+    },
+    {
+      "rls": true,
+      "name": "pages",
+      "schema": "public",
+      "force_rls": false
+    },
+    {
+      "rls": true,
+      "name": "scan_events",
+      "schema": "public",
+      "force_rls": false
+    }
+  ],
+  "buckets": [
+    {
+      "id": "menu-images",
+      "public": true,
+      "file_size_limit": 5242880,
+      "allowed_mime_types": [
+        "image/jpeg",
+        "image/png",
+        "image/webp"
+      ]
+    },
+    {
+      "id": "organization-assets",
+      "public": false,
+      "file_size_limit": 5242880,
+      "allowed_mime_types": [
+        "image/jpeg",
+        "image/png",
+        "image/webp"
+      ]
+    }
+  ],
+  "columns": [
+    {
+      "type": "uuid",
+      "table": "platform_admins",
+      "column": "user_id",
+      "schema": "private",
+      "default": null,
+      "nullable": "NO"
+    },
+    {
+      "type": "timestamptz",
+      "table": "platform_admins",
+      "column": "created_at",
+      "schema": "private",
+      "default": "now()",
+      "nullable": "NO"
+    },
+    {
+      "type": "uuid",
+      "table": "scan_rate_limits",
+      "column": "card_id",
+      "schema": "private",
+      "default": null,
+      "nullable": "NO"
+    },
+    {
+      "type": "text",
+      "table": "scan_rate_limits",
+      "column": "fingerprint",
+      "schema": "private",
+      "default": null,
+      "nullable": "NO"
+    },
+    {
+      "type": "timestamptz",
+      "table": "scan_rate_limits",
+      "column": "last_seen_at",
+      "schema": "private",
+      "default": "now()",
+      "nullable": "NO"
+    },
+    {
+      "type": "uuid",
+      "table": "menu_categories",
+      "column": "id",
+      "schema": "public",
+      "default": "gen_random_uuid()",
+      "nullable": "NO"
+    },
+    {
+      "type": "uuid",
+      "table": "menu_categories",
+      "column": "organization_id",
+      "schema": "public",
+      "default": null,
+      "nullable": "NO"
+    },
+    {
+      "type": "text",
+      "table": "menu_categories",
+      "column": "name",
+      "schema": "public",
+      "default": null,
+      "nullable": "NO"
+    },
+    {
+      "type": "int4",
+      "table": "menu_categories",
+      "column": "sort_order",
+      "schema": "public",
+      "default": "0",
+      "nullable": "NO"
+    },
+    {
+      "type": "bool",
+      "table": "menu_categories",
+      "column": "is_active",
+      "schema": "public",
+      "default": "true",
+      "nullable": "NO"
+    },
+    {
+      "type": "timestamptz",
+      "table": "menu_categories",
+      "column": "created_at",
+      "schema": "public",
+      "default": "now()",
+      "nullable": "NO"
+    },
+    {
+      "type": "timestamptz",
+      "table": "menu_categories",
+      "column": "updated_at",
+      "schema": "public",
+      "default": "now()",
+      "nullable": "NO"
+    },
+    {
+      "type": "uuid",
+      "table": "menu_items",
+      "column": "id",
+      "schema": "public",
+      "default": "gen_random_uuid()",
+      "nullable": "NO"
+    },
+    {
+      "type": "uuid",
+      "table": "menu_items",
+      "column": "organization_id",
+      "schema": "public",
+      "default": null,
+      "nullable": "NO"
+    },
+    {
+      "type": "uuid",
+      "table": "menu_items",
+      "column": "category_id",
+      "schema": "public",
+      "default": null,
+      "nullable": "NO"
+    },
+    {
+      "type": "text",
+      "table": "menu_items",
+      "column": "name_mn",
+      "schema": "public",
+      "default": null,
+      "nullable": "NO"
+    },
+    {
+      "type": "text",
+      "table": "menu_items",
+      "column": "name_en",
+      "schema": "public",
+      "default": "''::text",
+      "nullable": "NO"
+    },
+    {
+      "type": "text",
+      "table": "menu_items",
+      "column": "description",
+      "schema": "public",
+      "default": "''::text",
+      "nullable": "NO"
+    },
+    {
+      "type": "int8",
+      "table": "menu_items",
+      "column": "price_mnt",
+      "schema": "public",
+      "default": null,
+      "nullable": "NO"
+    },
+    {
+      "type": "text",
+      "table": "menu_items",
+      "column": "image_path",
+      "schema": "public",
+      "default": null,
+      "nullable": "YES"
+    },
+    {
+      "type": "bool",
+      "table": "menu_items",
+      "column": "is_available",
+      "schema": "public",
+      "default": "true",
+      "nullable": "NO"
+    },
+    {
+      "type": "bool",
+      "table": "menu_items",
+      "column": "is_published",
+      "schema": "public",
+      "default": "false",
+      "nullable": "NO"
+    },
+    {
+      "type": "int4",
+      "table": "menu_items",
+      "column": "sort_order",
+      "schema": "public",
+      "default": "0",
+      "nullable": "NO"
+    },
+    {
+      "type": "timestamptz",
+      "table": "menu_items",
+      "column": "created_at",
+      "schema": "public",
+      "default": "now()",
+      "nullable": "NO"
+    },
+    {
+      "type": "timestamptz",
+      "table": "menu_items",
+      "column": "updated_at",
+      "schema": "public",
+      "default": "now()",
+      "nullable": "NO"
+    },
+    {
+      "type": "uuid",
+      "table": "nfc_cards",
+      "column": "id",
+      "schema": "public",
+      "default": "gen_random_uuid()",
+      "nullable": "NO"
+    },
+    {
+      "type": "uuid",
+      "table": "nfc_cards",
+      "column": "organization_id",
+      "schema": "public",
+      "default": null,
+      "nullable": "NO"
+    },
+    {
+      "type": "uuid",
+      "table": "nfc_cards",
+      "column": "page_id",
+      "schema": "public",
+      "default": null,
+      "nullable": "NO"
+    },
+    {
+      "type": "text",
+      "table": "nfc_cards",
+      "column": "code",
+      "schema": "public",
+      "default": null,
+      "nullable": "NO"
+    },
+    {
+      "type": "text",
+      "table": "nfc_cards",
+      "column": "name",
+      "schema": "public",
+      "default": null,
+      "nullable": "NO"
+    },
+    {
+      "type": "bool",
+      "table": "nfc_cards",
+      "column": "is_active",
+      "schema": "public",
+      "default": "true",
+      "nullable": "NO"
+    },
+    {
+      "type": "timestamptz",
+      "table": "nfc_cards",
+      "column": "created_at",
+      "schema": "public",
+      "default": "now()",
+      "nullable": "NO"
+    },
+    {
+      "type": "timestamptz",
+      "table": "nfc_cards",
+      "column": "updated_at",
+      "schema": "public",
+      "default": "now()",
+      "nullable": "NO"
+    },
+    {
+      "type": "uuid",
+      "table": "organization_members",
+      "column": "organization_id",
+      "schema": "public",
+      "default": null,
+      "nullable": "NO"
+    },
+    {
+      "type": "uuid",
+      "table": "organization_members",
+      "column": "user_id",
+      "schema": "public",
+      "default": null,
+      "nullable": "NO"
+    },
+    {
+      "type": "text",
+      "table": "organization_members",
+      "column": "role",
+      "schema": "public",
+      "default": null,
+      "nullable": "NO"
+    },
+    {
+      "type": "_text",
+      "table": "organization_members",
+      "column": "permissions",
+      "schema": "public",
+      "default": "'{}'::text[]",
+      "nullable": "NO"
+    },
+    {
+      "type": "timestamptz",
+      "table": "organization_members",
+      "column": "created_at",
+      "schema": "public",
+      "default": "now()",
+      "nullable": "NO"
+    },
+    {
+      "type": "uuid",
+      "table": "organizations",
+      "column": "id",
+      "schema": "public",
+      "default": "gen_random_uuid()",
+      "nullable": "NO"
+    },
+    {
+      "type": "text",
+      "table": "organizations",
+      "column": "name",
+      "schema": "public",
+      "default": null,
+      "nullable": "NO"
+    },
+    {
+      "type": "text",
+      "table": "organizations",
+      "column": "slug",
+      "schema": "public",
+      "default": null,
+      "nullable": "NO"
+    },
+    {
+      "type": "text",
+      "table": "organizations",
+      "column": "description",
+      "schema": "public",
+      "default": "''::text",
+      "nullable": "NO"
+    },
+    {
+      "type": "text",
+      "table": "organizations",
+      "column": "logo_path",
+      "schema": "public",
+      "default": null,
+      "nullable": "YES"
+    },
+    {
+      "type": "text",
+      "table": "organizations",
+      "column": "cover_path",
+      "schema": "public",
+      "default": null,
+      "nullable": "YES"
+    },
+    {
+      "type": "text",
+      "table": "organizations",
+      "column": "phone",
+      "schema": "public",
+      "default": "''::text",
+      "nullable": "NO"
+    },
+    {
+      "type": "text",
+      "table": "organizations",
+      "column": "email",
+      "schema": "public",
+      "default": "''::text",
+      "nullable": "NO"
+    },
+    {
+      "type": "text",
+      "table": "organizations",
+      "column": "address",
+      "schema": "public",
+      "default": "''::text",
+      "nullable": "NO"
+    },
+    {
+      "type": "text",
+      "table": "organizations",
+      "column": "maps_url",
+      "schema": "public",
+      "default": "''::text",
+      "nullable": "NO"
+    },
+    {
+      "type": "text",
+      "table": "organizations",
+      "column": "facebook_url",
+      "schema": "public",
+      "default": "''::text",
+      "nullable": "NO"
+    },
+    {
+      "type": "text",
+      "table": "organizations",
+      "column": "instagram_url",
+      "schema": "public",
+      "default": "''::text",
+      "nullable": "NO"
+    },
+    {
+      "type": "text",
+      "table": "organizations",
+      "column": "website_url",
+      "schema": "public",
+      "default": "''::text",
+      "nullable": "NO"
+    },
+    {
+      "type": "text",
+      "table": "organizations",
+      "column": "primary_color",
+      "schema": "public",
+      "default": "'#2563eb'::text",
+      "nullable": "NO"
+    },
+    {
+      "type": "text",
+      "table": "organizations",
+      "column": "secondary_color",
+      "schema": "public",
+      "default": "'#06b6d4'::text",
+      "nullable": "NO"
+    },
+    {
+      "type": "bool",
+      "table": "organizations",
+      "column": "is_active",
+      "schema": "public",
+      "default": "true",
+      "nullable": "NO"
+    },
+    {
+      "type": "timestamptz",
+      "table": "organizations",
+      "column": "created_at",
+      "schema": "public",
+      "default": "now()",
+      "nullable": "NO"
+    },
+    {
+      "type": "timestamptz",
+      "table": "organizations",
+      "column": "updated_at",
+      "schema": "public",
+      "default": "now()",
+      "nullable": "NO"
+    },
+    {
+      "type": "uuid",
+      "table": "pages",
+      "column": "id",
+      "schema": "public",
+      "default": "gen_random_uuid()",
+      "nullable": "NO"
+    },
+    {
+      "type": "uuid",
+      "table": "pages",
+      "column": "organization_id",
+      "schema": "public",
+      "default": null,
+      "nullable": "NO"
+    },
+    {
+      "type": "text",
+      "table": "pages",
+      "column": "slug",
+      "schema": "public",
+      "default": null,
+      "nullable": "NO"
+    },
+    {
+      "type": "text",
+      "table": "pages",
+      "column": "title",
+      "schema": "public",
+      "default": null,
+      "nullable": "NO"
+    },
+    {
+      "type": "text",
+      "table": "pages",
+      "column": "type",
+      "schema": "public",
+      "default": null,
+      "nullable": "NO"
+    },
+    {
+      "type": "text",
+      "table": "pages",
+      "column": "description",
+      "schema": "public",
+      "default": "''::text",
+      "nullable": "NO"
+    },
+    {
+      "type": "jsonb",
+      "table": "pages",
+      "column": "content",
+      "schema": "public",
+      "default": "'{}'::jsonb",
+      "nullable": "NO"
+    },
+    {
+      "type": "bool",
+      "table": "pages",
+      "column": "is_published",
+      "schema": "public",
+      "default": "false",
+      "nullable": "NO"
+    },
+    {
+      "type": "timestamptz",
+      "table": "pages",
+      "column": "created_at",
+      "schema": "public",
+      "default": "now()",
+      "nullable": "NO"
+    },
+    {
+      "type": "timestamptz",
+      "table": "pages",
+      "column": "updated_at",
+      "schema": "public",
+      "default": "now()",
+      "nullable": "NO"
+    },
+    {
+      "type": "uuid",
+      "table": "scan_events",
+      "column": "id",
+      "schema": "public",
+      "default": "gen_random_uuid()",
+      "nullable": "NO"
+    },
+    {
+      "type": "uuid",
+      "table": "scan_events",
+      "column": "organization_id",
+      "schema": "public",
+      "default": null,
+      "nullable": "NO"
+    },
+    {
+      "type": "uuid",
+      "table": "scan_events",
+      "column": "card_id",
+      "schema": "public",
+      "default": null,
+      "nullable": "NO"
+    },
+    {
+      "type": "text",
+      "table": "scan_events",
+      "column": "source",
+      "schema": "public",
+      "default": null,
+      "nullable": "NO"
+    },
+    {
+      "type": "timestamptz",
+      "table": "scan_events",
+      "column": "created_at",
+      "schema": "public",
+      "default": "now()",
+      "nullable": "NO"
+    }
+  ],
+  "indexes": [
+    {
+      "indexdef": "CREATE UNIQUE INDEX platform_admins_pkey ON private.platform_admins USING btree (user_id)",
+      "indexname": "platform_admins_pkey",
+      "tablename": "platform_admins",
+      "schemaname": "private",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX scan_rate_limits_expiry_idx ON private.scan_rate_limits USING btree (last_seen_at)",
+      "indexname": "scan_rate_limits_expiry_idx",
+      "tablename": "scan_rate_limits",
+      "schemaname": "private",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX scan_rate_limits_pkey ON private.scan_rate_limits USING btree (card_id, fingerprint)",
+      "indexname": "scan_rate_limits_pkey",
+      "tablename": "scan_rate_limits",
+      "schemaname": "private",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX menu_categories_org_sort_idx ON public.menu_categories USING btree (organization_id, sort_order)",
+      "indexname": "menu_categories_org_sort_idx",
+      "tablename": "menu_categories",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX menu_categories_organization_id_id_key ON public.menu_categories USING btree (organization_id, id)",
+      "indexname": "menu_categories_organization_id_id_key",
+      "tablename": "menu_categories",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX menu_categories_pkey ON public.menu_categories USING btree (id)",
+      "indexname": "menu_categories_pkey",
+      "tablename": "menu_categories",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX menu_items_org_category_sort_idx ON public.menu_items USING btree (organization_id, category_id, sort_order)",
+      "indexname": "menu_items_org_category_sort_idx",
+      "tablename": "menu_items",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX menu_items_pkey ON public.menu_items USING btree (id)",
+      "indexname": "menu_items_pkey",
+      "tablename": "menu_items",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX nfc_cards_code_key ON public.nfc_cards USING btree (code)",
+      "indexname": "nfc_cards_code_key",
+      "tablename": "nfc_cards",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX nfc_cards_org_page_idx ON public.nfc_cards USING btree (organization_id, page_id)",
+      "indexname": "nfc_cards_org_page_idx",
+      "tablename": "nfc_cards",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX nfc_cards_pkey ON public.nfc_cards USING btree (id)",
+      "indexname": "nfc_cards_pkey",
+      "tablename": "nfc_cards",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX organization_members_pkey ON public.organization_members USING btree (organization_id, user_id)",
+      "indexname": "organization_members_pkey",
+      "tablename": "organization_members",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX organization_members_user_idx ON public.organization_members USING btree (user_id, organization_id)",
+      "indexname": "organization_members_user_idx",
+      "tablename": "organization_members",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX organizations_pkey ON public.organizations USING btree (id)",
+      "indexname": "organizations_pkey",
+      "tablename": "organizations",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX organizations_slug_key ON public.organizations USING btree (slug)",
+      "indexname": "organizations_slug_key",
+      "tablename": "organizations",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX pages_org_idx ON public.pages USING btree (organization_id, created_at DESC)",
+      "indexname": "pages_org_idx",
+      "tablename": "pages",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX pages_organization_id_id_key ON public.pages USING btree (organization_id, id)",
+      "indexname": "pages_organization_id_id_key",
+      "tablename": "pages",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX pages_pkey ON public.pages USING btree (id)",
+      "indexname": "pages_pkey",
+      "tablename": "pages",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX pages_slug_key ON public.pages USING btree (slug)",
+      "indexname": "pages_slug_key",
+      "tablename": "pages",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX scan_events_card_created_idx ON public.scan_events USING btree (card_id, created_at DESC)",
+      "indexname": "scan_events_card_created_idx",
+      "tablename": "scan_events",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX scan_events_created_idx ON public.scan_events USING btree (created_at DESC)",
+      "indexname": "scan_events_created_idx",
+      "tablename": "scan_events",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX scan_events_org_created_idx ON public.scan_events USING btree (organization_id, created_at DESC)",
+      "indexname": "scan_events_org_created_idx",
+      "tablename": "scan_events",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX scan_events_pkey ON public.scan_events USING btree (id)",
+      "indexname": "scan_events_pkey",
+      "tablename": "scan_events",
+      "schemaname": "public",
+      "tablespace": null
+    }
+  ],
+  "policies": [
+    {
+      "cmd": "DELETE",
+      "qual": "private.has_permission(organization_id, 'menu'::text)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "menu_categories",
+      "permissive": "PERMISSIVE",
+      "policyname": "tenant_delete",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "INSERT",
+      "qual": null,
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "menu_categories",
+      "permissive": "PERMISSIVE",
+      "policyname": "tenant_insert",
+      "schemaname": "public",
+      "with_check": "private.has_permission(organization_id, 'menu'::text)"
+    },
+    {
+      "cmd": "SELECT",
+      "qual": "private.has_permission(organization_id, 'menu'::text)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "menu_categories",
+      "permissive": "PERMISSIVE",
+      "policyname": "tenant_read",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "UPDATE",
+      "qual": "private.has_permission(organization_id, 'menu'::text)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "menu_categories",
+      "permissive": "PERMISSIVE",
+      "policyname": "tenant_update",
+      "schemaname": "public",
+      "with_check": "private.has_permission(organization_id, 'menu'::text)"
+    },
+    {
+      "cmd": "DELETE",
+      "qual": "private.has_permission(organization_id, 'menu'::text)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "menu_items",
+      "permissive": "PERMISSIVE",
+      "policyname": "tenant_delete",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "INSERT",
+      "qual": null,
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "menu_items",
+      "permissive": "PERMISSIVE",
+      "policyname": "tenant_insert",
+      "schemaname": "public",
+      "with_check": "private.has_permission(organization_id, 'menu'::text)"
+    },
+    {
+      "cmd": "SELECT",
+      "qual": "private.has_permission(organization_id, 'menu'::text)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "menu_items",
+      "permissive": "PERMISSIVE",
+      "policyname": "tenant_read",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "UPDATE",
+      "qual": "private.has_permission(organization_id, 'menu'::text)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "menu_items",
+      "permissive": "PERMISSIVE",
+      "policyname": "tenant_update",
+      "schemaname": "public",
+      "with_check": "private.has_permission(organization_id, 'menu'::text)"
+    },
+    {
+      "cmd": "DELETE",
+      "qual": "private.has_permission(organization_id, 'cards'::text)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "nfc_cards",
+      "permissive": "PERMISSIVE",
+      "policyname": "tenant_delete",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "INSERT",
+      "qual": null,
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "nfc_cards",
+      "permissive": "PERMISSIVE",
+      "policyname": "tenant_insert",
+      "schemaname": "public",
+      "with_check": "private.has_permission(organization_id, 'cards'::text)"
+    },
+    {
+      "cmd": "SELECT",
+      "qual": "private.has_permission(organization_id, 'cards'::text)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "nfc_cards",
+      "permissive": "PERMISSIVE",
+      "policyname": "tenant_read",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "UPDATE",
+      "qual": "private.has_permission(organization_id, 'cards'::text)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "nfc_cards",
+      "permissive": "PERMISSIVE",
+      "policyname": "tenant_update",
+      "schemaname": "public",
+      "with_check": "private.has_permission(organization_id, 'cards'::text)"
+    },
+    {
+      "cmd": "SELECT",
+      "qual": "((user_id = ( SELECT auth.uid() AS uid)) OR private.has_permission(organization_id))",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "organization_members",
+      "permissive": "PERMISSIVE",
+      "policyname": "members_read",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "SELECT",
+      "qual": "private.is_member(id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "organizations",
+      "permissive": "PERMISSIVE",
+      "policyname": "organizations_read",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "UPDATE",
+      "qual": "private.has_permission(id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "organizations",
+      "permissive": "PERMISSIVE",
+      "policyname": "organizations_update",
+      "schemaname": "public",
+      "with_check": "private.has_permission(id)"
+    },
+    {
+      "cmd": "DELETE",
+      "qual": "(private.has_permission(organization_id, 'pages'::text) OR ((type = 'menu'::text) AND private.has_permission(organization_id, 'menu'::text)))",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "pages",
+      "permissive": "PERMISSIVE",
+      "policyname": "pages_delete",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "INSERT",
+      "qual": null,
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "pages",
+      "permissive": "PERMISSIVE",
+      "policyname": "pages_insert",
+      "schemaname": "public",
+      "with_check": "(private.has_permission(organization_id, 'pages'::text) OR ((type = 'menu'::text) AND private.has_permission(organization_id, 'menu'::text)))"
+    },
+    {
+      "cmd": "SELECT",
+      "qual": "(private.has_permission(organization_id, 'pages'::text) OR private.has_permission(organization_id, 'cards'::text) OR ((type = 'menu'::text) AND private.has_permission(organization_id, 'menu'::text)))",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "pages",
+      "permissive": "PERMISSIVE",
+      "policyname": "pages_read",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "UPDATE",
+      "qual": "(private.has_permission(organization_id, 'pages'::text) OR ((type = 'menu'::text) AND private.has_permission(organization_id, 'menu'::text)))",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "pages",
+      "permissive": "PERMISSIVE",
+      "policyname": "pages_update",
+      "schemaname": "public",
+      "with_check": "(private.has_permission(organization_id, 'pages'::text) OR ((type = 'menu'::text) AND private.has_permission(organization_id, 'menu'::text)))"
+    },
+    {
+      "cmd": "SELECT",
+      "qual": "private.has_permission(organization_id, 'analytics'::text)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "scan_events",
+      "permissive": "PERMISSIVE",
+      "policyname": "scans_read",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "DELETE",
+      "qual": "((bucket_id = 'organization-assets'::text) AND private.can_access_asset(name, true))",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "objects",
+      "permissive": "PERMISSIVE",
+      "policyname": "organization_assets_delete",
+      "schemaname": "storage",
+      "with_check": null
+    },
+    {
+      "cmd": "INSERT",
+      "qual": null,
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "objects",
+      "permissive": "PERMISSIVE",
+      "policyname": "organization_assets_insert",
+      "schemaname": "storage",
+      "with_check": "((bucket_id = 'organization-assets'::text) AND private.can_access_asset(name, true))"
+    },
+    {
+      "cmd": "SELECT",
+      "qual": "((bucket_id = 'organization-assets'::text) AND private.can_access_asset(name, false))",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "objects",
+      "permissive": "PERMISSIVE",
+      "policyname": "organization_assets_read",
+      "schemaname": "storage",
+      "with_check": null
+    },
+    {
+      "cmd": "UPDATE",
+      "qual": "((bucket_id = 'organization-assets'::text) AND private.can_access_asset(name, true))",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "objects",
+      "permissive": "PERMISSIVE",
+      "policyname": "organization_assets_update",
+      "schemaname": "storage",
+      "with_check": "((bucket_id = 'organization-assets'::text) AND private.can_access_asset(name, true))"
+    }
+  ],
+  "triggers": [
+    {
+      "table": "menu_categories",
+      "schema": "public",
+      "definition": "CREATE TRIGGER keep_tenant BEFORE UPDATE ON public.menu_categories FOR EACH ROW EXECUTE FUNCTION private.keep_tenant()"
+    },
+    {
+      "table": "menu_categories",
+      "schema": "public",
+      "definition": "CREATE TRIGGER touch_row BEFORE UPDATE ON public.menu_categories FOR EACH ROW EXECUTE FUNCTION private.touch_row()"
+    },
+    {
+      "table": "menu_items",
+      "schema": "public",
+      "definition": "CREATE TRIGGER keep_tenant BEFORE UPDATE ON public.menu_items FOR EACH ROW EXECUTE FUNCTION private.keep_tenant()"
+    },
+    {
+      "table": "menu_items",
+      "schema": "public",
+      "definition": "CREATE TRIGGER touch_row BEFORE UPDATE ON public.menu_items FOR EACH ROW EXECUTE FUNCTION private.touch_row()"
+    },
+    {
+      "table": "nfc_cards",
+      "schema": "public",
+      "definition": "CREATE TRIGGER guard_card BEFORE INSERT OR UPDATE ON public.nfc_cards FOR EACH ROW EXECUTE FUNCTION private.guard_card()"
+    },
+    {
+      "table": "nfc_cards",
+      "schema": "public",
+      "definition": "CREATE TRIGGER touch_row BEFORE UPDATE ON public.nfc_cards FOR EACH ROW EXECUTE FUNCTION private.touch_row()"
+    },
+    {
+      "table": "organizations",
+      "schema": "public",
+      "definition": "CREATE TRIGGER touch_row BEFORE UPDATE ON public.organizations FOR EACH ROW EXECUTE FUNCTION private.touch_row()"
+    },
+    {
+      "table": "pages",
+      "schema": "public",
+      "definition": "CREATE TRIGGER keep_tenant BEFORE UPDATE ON public.pages FOR EACH ROW EXECUTE FUNCTION private.keep_tenant()"
+    },
+    {
+      "table": "pages",
+      "schema": "public",
+      "definition": "CREATE TRIGGER touch_row BEFORE UPDATE ON public.pages FOR EACH ROW EXECUTE FUNCTION private.touch_row()"
+    }
+  ],
+  "functions": [
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres"
+      ],
+      "args": "p_name text, p_write boolean",
+      "name": "can_access_asset",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "private",
+      "definer": true,
+      "definition": "CREATE OR REPLACE FUNCTION private.can_access_asset(p_name text, p_write boolean)\n RETURNS boolean\n LANGUAGE plpgsql\n STABLE SECURITY DEFINER\n SET search_path TO ''\nAS $function$\ndeclare v_org uuid; v_scope text;\nbegin\n  if p_name !~ '^[0-9a-f-]{36}/(branding|menu|pages)/[0-9a-f-]{36}\\.(jpg|jpeg|png|webp)$' then return false; end if;\n  begin v_org := split_part(p_name,'/',1)::uuid; exception when invalid_text_representation then return false; end;\n  v_scope := split_part(p_name,'/',2);\n  if not p_write and v_scope = 'branding' then return private.is_member(v_org); end if;\n  return private.has_permission(v_org,case when v_scope = 'branding' then null else v_scope end);\nend;\n$function$\n"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres"
+      ],
+      "args": "p_name text, p_slug text",
+      "name": "create_organization",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "private",
+      "definer": true,
+      "definition": "CREATE OR REPLACE FUNCTION private.create_organization(p_name text, p_slug text)\n RETURNS uuid\n LANGUAGE plpgsql\n SECURITY DEFINER\n SET search_path TO ''\nAS $function$\ndeclare v_id uuid; v_user uuid := auth.uid();\nbegin\n  if v_user is null or not exists (select 1 from auth.users where id = v_user) then raise exception 'Authentication required' using errcode = '42501'; end if;\n  insert into public.organizations(name, slug) values (btrim(p_name), lower(btrim(p_slug))) returning id into v_id;\n  insert into public.organization_members(organization_id, user_id, role) values (v_id, v_user, 'owner');\n  return v_id;\nend;\n$function$\n"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres"
+      ],
+      "args": "p_organization_id uuid, p_from date, p_to date",
+      "name": "get_analytics",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "private",
+      "definer": true,
+      "definition": "CREATE OR REPLACE FUNCTION private.get_analytics(p_organization_id uuid, p_from date, p_to date)\n RETURNS jsonb\n LANGUAGE plpgsql\n STABLE SECURITY DEFINER\n SET search_path TO ''\nAS $function$\ndeclare v_result jsonb;\nbegin\n  if auth.uid() is null or (not private.is_platform_admin() and\n      (p_organization_id is null or not private.has_permission(p_organization_id,'analytics'))) then\n    raise exception 'Analytics permission required' using errcode = '42501';\n  end if;\n  if p_from is null or p_to is null or p_to < p_from or p_to - p_from > 365 then\n    raise exception 'Date range must contain 1 to 366 days' using errcode = '22023';\n  end if;\n  with events as materialized (\n    select e.* from public.scan_events e\n    where (p_organization_id is null or e.organization_id = p_organization_id)\n      and e.created_at >= (p_from::timestamp at time zone 'Asia/Ulaanbaatar')\n      and e.created_at < ((p_to + 1)::timestamp at time zone 'Asia/Ulaanbaatar')\n  ), card_totals as (\n    select organization_id,card_id,count(*) as opens,\n      count(*) filter (where source = 'qr') as qr,\n      count(*) filter (where source = 'unknown') as unknown\n    from events group by organization_id,card_id\n  ), current_cards as (\n    select c.* from public.nfc_cards c where p_organization_id is null or c.organization_id = p_organization_id\n  ), cards as (\n    select coalesce(c.id,t.card_id) as id,coalesce(c.organization_id,t.organization_id) as organization_id,\n      c.name,c.code,c.is_active,coalesce(t.opens,0) as opens,coalesce(t.qr,0) as qr,coalesce(t.unknown,0) as unknown\n    from current_cards c full join card_totals t on t.card_id = c.id and t.organization_id = c.organization_id\n  ), daily as (\n    select (created_at at time zone 'Asia/Ulaanbaatar')::date as day,count(*) as opens,\n      count(*) filter (where source = 'qr') as qr,count(*) filter (where source = 'unknown') as unknown\n    from events group by 1\n  ), organizations as (\n    select o.id,o.name,count(e.id) as opens,count(e.id) filter (where e.source = 'qr') as qr,\n      count(e.id) filter (where e.source = 'unknown') as unknown\n    from public.organizations o left join events e on e.organization_id = o.id\n    where p_organization_id is null or o.id = p_organization_id group by o.id,o.name\n  )\n  select jsonb_build_object(\n    'totals',jsonb_build_object('opens',(select count(*) from events),'qr',(select count(*) from events where source = 'qr'),\n      'unknown',(select count(*) from events where source = 'unknown'),\n      'active_cards',(select count(*) from current_cards where is_active),\n      'inactive_cards',(select count(*) from current_cards where not is_active)),\n    'days',(select jsonb_agg(jsonb_build_object('date',d.day::date,'opens',coalesce(t.opens,0),'qr',coalesce(t.qr,0),'unknown',coalesce(t.unknown,0)) order by d.day)\n      from generate_series(p_from::timestamp,p_to::timestamp,interval '1 day') d(day) left join daily t on t.day = d.day::date),\n    'cards',coalesce((select jsonb_agg(to_jsonb(c) order by c.opens desc,c.id) from (select * from cards order by opens desc,id limit 100) c),'[]'::jsonb),\n    'card_count',(select count(*) from cards),\n    'organizations',coalesce((select jsonb_agg(to_jsonb(o) order by o.opens desc,o.id) from (select * from organizations order by opens desc,id limit 100) o),'[]'::jsonb),\n    'organization_count',(select count(*) from organizations)\n  ) into v_result;\n  return v_result;\nend;\n$function$\n"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "anon=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "args": "p_path text",
+      "name": "get_public_asset",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "private",
+      "definer": true,
+      "definition": "CREATE OR REPLACE FUNCTION private.get_public_asset(p_path text)\n RETURNS boolean\n LANGUAGE sql\n STABLE SECURITY DEFINER\n SET search_path TO ''\nAS $function$\n  select p_path is not null and p_path ~ '^[0-9a-f-]{36}/(branding|menu|pages)/[0-9a-f-]{36}\\.(jpg|jpeg|png|webp)$' and exists (\n    select 1 from public.organizations o join public.pages p on p.organization_id = o.id\n    where o.is_active and p.is_published and (\n      p_path in (o.logo_path,o.cover_path)\n      or (p.content->>'photo_path' = p_path and p_path like o.id::text || '/pages/%')\n      or (p.type = 'menu' and exists (select 1 from public.menu_items i\n        join public.menu_categories c on c.id = i.category_id and c.organization_id = i.organization_id\n        where i.organization_id = o.id and i.image_path = p_path and i.is_published and c.is_active))\n    )\n  );\n$function$\n"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "anon=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "args": "p_slug text",
+      "name": "get_public_page",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "private",
+      "definer": true,
+      "definition": "CREATE OR REPLACE FUNCTION private.get_public_page(p_slug text)\n RETURNS jsonb\n LANGUAGE sql\n STABLE SECURITY DEFINER\n SET search_path TO ''\nAS $function$\n  select jsonb_build_object(\n    'organization', jsonb_build_object('id',o.id,'name',o.name,'slug',o.slug,'description',o.description,\n      'logo_path',o.logo_path,'cover_path',o.cover_path,'phone',o.phone,'email',o.email,'address',o.address,\n      'maps_url',o.maps_url,'facebook_url',o.facebook_url,'instagram_url',o.instagram_url,'website_url',o.website_url,\n      'primary_color',o.primary_color,'secondary_color',o.secondary_color),\n    'page', jsonb_build_object('id',p.id,'slug',p.slug,'title',p.title,'type',p.type,'description',p.description,\n      'content',coalesce((select jsonb_object_agg(k,v) from jsonb_each(p.content) as x(k,v)\n        where k in ('person_name','position','phone','email','website','services','links','photo_path')), '{}'::jsonb)),\n    'categories',case when p.type = 'menu' then coalesce((select jsonb_agg(jsonb_build_object('id',c.id,'name',c.name,'sort_order',c.sort_order) order by c.sort_order,c.name)\n      from public.menu_categories c where c.organization_id = o.id and c.is_active), '[]'::jsonb) else '[]'::jsonb end,\n    'items',case when p.type = 'menu' then coalesce((select jsonb_agg(jsonb_build_object('id',i.id,'category_id',i.category_id,\n      'name_mn',i.name_mn,'name_en',i.name_en,'description',i.description,'price_mnt',i.price_mnt,'image_path',i.image_path,\n      'is_available',i.is_available,'sort_order',i.sort_order) order by i.sort_order,i.name_mn)\n      from public.menu_items i join public.menu_categories c on c.id = i.category_id and c.organization_id = i.organization_id\n      where i.organization_id = o.id and i.is_published and c.is_active), '[]'::jsonb) else '[]'::jsonb end\n  ) from public.pages p join public.organizations o on o.id = p.organization_id\n    where p.slug = p_slug and p.is_published and o.is_active;\n$function$\n"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres"
+      ],
+      "args": "",
+      "name": "guard_card",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "private",
+      "definer": false,
+      "definition": "CREATE OR REPLACE FUNCTION private.guard_card()\n RETURNS trigger\n LANGUAGE plpgsql\n SET search_path TO ''\nAS $function$\nbegin\n  if tg_op = 'INSERT' then\n    -- Each independent prefix contains 48 random bits; version/variant bits occur later.\n    new.code := substr(replace(gen_random_uuid()::text, '-', ''), 1, 12) || substr(replace(gen_random_uuid()::text, '-', ''), 1, 12);\n  else\n    if new.code is distinct from old.code then raise exception 'NFC code is immutable' using errcode = '42501'; end if;\n    if new.organization_id is distinct from old.organization_id and not private.is_platform_admin() then\n      raise exception 'Only platform administrators can transfer cards' using errcode = '42501';\n    end if;\n  end if;\n  return new;\nend;\n$function$\n"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres"
+      ],
+      "args": "p_organization_id uuid, p_permission text",
+      "name": "has_permission",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "private",
+      "definer": true,
+      "definition": "CREATE OR REPLACE FUNCTION private.has_permission(p_organization_id uuid, p_permission text DEFAULT NULL::text)\n RETURNS boolean\n LANGUAGE sql\n STABLE SECURITY DEFINER\n SET search_path TO ''\nAS $function$\n  select auth.uid() is not null and (private.is_platform_admin() or exists (\n    select 1 from public.organization_members where organization_id = p_organization_id and user_id = (select auth.uid())\n      and (role = 'owner' or (p_permission is not null and p_permission = any(permissions)))\n  ));\n$function$\n"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres"
+      ],
+      "args": "p_organization_id uuid",
+      "name": "is_member",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "private",
+      "definer": true,
+      "definition": "CREATE OR REPLACE FUNCTION private.is_member(p_organization_id uuid)\n RETURNS boolean\n LANGUAGE sql\n STABLE SECURITY DEFINER\n SET search_path TO ''\nAS $function$\n  select auth.uid() is not null and (private.is_platform_admin() or exists (\n    select 1 from public.organization_members where organization_id = p_organization_id and user_id = (select auth.uid())\n  ));\n$function$\n"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres"
+      ],
+      "args": "",
+      "name": "is_platform_admin",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "private",
+      "definer": true,
+      "definition": "CREATE OR REPLACE FUNCTION private.is_platform_admin()\n RETURNS boolean\n LANGUAGE sql\n STABLE SECURITY DEFINER\n SET search_path TO ''\nAS $function$\n  select auth.uid() is not null and exists (select 1 from private.platform_admins where user_id = (select auth.uid()));\n$function$\n"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres"
+      ],
+      "args": "",
+      "name": "keep_tenant",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "private",
+      "definer": false,
+      "definition": "CREATE OR REPLACE FUNCTION private.keep_tenant()\n RETURNS trigger\n LANGUAGE plpgsql\n SET search_path TO ''\nAS $function$\nbegin\n  if new.organization_id is distinct from old.organization_id then\n    raise exception 'Organization assignment is immutable' using errcode = '42501';\n  end if;\n  return new;\nend;\n$function$\n"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres"
+      ],
+      "args": "",
+      "name": "list_platform_users",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "private",
+      "definer": true,
+      "definition": "CREATE OR REPLACE FUNCTION private.list_platform_users()\n RETURNS TABLE(id uuid, email text, created_at timestamp with time zone)\n LANGUAGE plpgsql\n STABLE SECURITY DEFINER\n SET search_path TO ''\nAS $function$\nbegin\n  if not private.is_platform_admin() then raise exception 'Platform admin required' using errcode = '42501'; end if;\n  return query select u.id, u.email::text, u.created_at from auth.users u order by u.created_at desc limit 1000;\nend;\n$function$\n"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres"
+      ],
+      "args": "p_card_id uuid, p_org_id uuid, p_page_id uuid",
+      "name": "reassign_nfc_card",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "private",
+      "definer": true,
+      "definition": "CREATE OR REPLACE FUNCTION private.reassign_nfc_card(p_card_id uuid, p_org_id uuid, p_page_id uuid)\n RETURNS void\n LANGUAGE plpgsql\n SECURITY DEFINER\n SET search_path TO ''\nAS $function$\nbegin\n  if not private.is_platform_admin() then raise exception 'Platform admin required' using errcode = '42501'; end if;\n  update public.nfc_cards set organization_id = p_org_id, page_id = p_page_id where id = p_card_id;\n  if not found then raise exception 'Card not found' using errcode = '22023'; end if;\n  delete from private.scan_rate_limits where card_id = p_card_id;\nend;\n$function$\n"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "args": "p_code text, p_source text, p_fingerprint text",
+      "name": "record_scan",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "private",
+      "definer": true,
+      "definition": "CREATE OR REPLACE FUNCTION private.record_scan(p_code text, p_source text, p_fingerprint text)\n RETURNS boolean\n LANGUAGE plpgsql\n SECURITY DEFINER\n SET search_path TO ''\nAS $function$\ndeclare v_card uuid; v_org uuid; v_allowed boolean;\nbegin\n  if p_source not in ('qr','unknown') or p_fingerprint is null or p_fingerprint !~ '^[0-9a-f]{64}$' then return false; end if;\n  select c.id, c.organization_id into v_card, v_org from public.nfc_cards c\n    join public.pages p on p.id = c.page_id and p.organization_id = c.organization_id\n    join public.organizations o on o.id = c.organization_id\n    where c.code = p_code and c.is_active and o.is_active and p.is_published for share of c, p, o;\n  if v_card is null then return false; end if;\n  insert into private.scan_rate_limits(card_id, fingerprint, last_seen_at) values (v_card, p_fingerprint, clock_timestamp())\n    on conflict (card_id, fingerprint) do update set last_seen_at = excluded.last_seen_at\n    where private.scan_rate_limits.last_seen_at < clock_timestamp() - interval '1 minute'\n    returning true into v_allowed;\n  if not coalesce(v_allowed,false) then return false; end if;\n  insert into public.scan_events(organization_id,card_id,source) values (v_org,v_card,p_source);\n  -- Opportunistic cleanup bounds retention without requiring the cron extension.\n  delete from private.scan_rate_limits where last_seen_at < now() - interval '1 day';\n  return true;\nend;\n$function$\n"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres"
+      ],
+      "args": "p_organization_id uuid, p_user_id uuid",
+      "name": "remove_organization_member",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "private",
+      "definer": true,
+      "definition": "CREATE OR REPLACE FUNCTION private.remove_organization_member(p_organization_id uuid, p_user_id uuid)\n RETURNS void\n LANGUAGE plpgsql\n SECURITY DEFINER\n SET search_path TO ''\nAS $function$\nbegin\n  perform 1 from public.organizations where id = p_organization_id for update;\n  if not private.has_permission(p_organization_id) then raise exception 'Owner access required' using errcode = '42501'; end if;\n  if exists (select 1 from public.organization_members where organization_id = p_organization_id and user_id = p_user_id and role = 'owner')\n    and (select count(*) from public.organization_members where organization_id = p_organization_id and role = 'owner') <= 1 then\n    raise exception 'Organization requires at least one owner' using errcode = '23514';\n  end if;\n  delete from public.organization_members where organization_id = p_organization_id and user_id = p_user_id;\nend;\n$function$\n"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "anon=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "args": "p_code text",
+      "name": "resolve_nfc_card",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "private",
+      "definer": true,
+      "definition": "CREATE OR REPLACE FUNCTION private.resolve_nfc_card(p_code text)\n RETURNS text\n LANGUAGE sql\n STABLE SECURITY DEFINER\n SET search_path TO ''\nAS $function$\n  select p.slug from public.nfc_cards c join public.pages p on p.id = c.page_id and p.organization_id = c.organization_id\n    join public.organizations o on o.id = c.organization_id\n    where c.code = p_code and c.is_active and p.is_published and o.is_active;\n$function$\n"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres"
+      ],
+      "args": "p_query text, p_offset integer, p_limit integer",
+      "name": "search_platform_users",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "private",
+      "definer": true,
+      "definition": "CREATE OR REPLACE FUNCTION private.search_platform_users(p_query text DEFAULT ''::text, p_offset integer DEFAULT 0, p_limit integer DEFAULT 50)\n RETURNS jsonb\n LANGUAGE plpgsql\n STABLE SECURITY DEFINER\n SET search_path TO ''\nAS $function$\ndeclare v_result jsonb;\nbegin\n  if auth.uid() is null or not private.is_platform_admin() then\n    raise exception 'Platform admin required' using errcode = '42501';\n  end if;\n  if p_query is null or length(p_query) > 254 or p_offset is null or p_offset < 0 or p_offset > 5000000\n    or p_limit is null or p_limit < 1 or p_limit > 100 then\n    raise exception 'Invalid pagination' using errcode = '22023';\n  end if;\n  with matching as materialized (\n    select u.id, u.email::text, u.created_at from auth.users u\n    where strpos(lower(coalesce(u.email, '')), lower(btrim(p_query))) > 0\n  )\n  select jsonb_build_object(\n    'count', (select count(*) from matching),\n    'users', coalesce((select jsonb_agg(to_jsonb(u) order by u.created_at desc, u.id)\n      from (select * from matching order by created_at desc, id limit p_limit offset p_offset) u), '[]'::jsonb)\n  ) into v_result;\n  return v_result;\nend;\n$function$\n"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres"
+      ],
+      "args": "",
+      "name": "touch_row",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "private",
+      "definer": false,
+      "definition": "CREATE OR REPLACE FUNCTION private.touch_row()\n RETURNS trigger\n LANGUAGE plpgsql\n SET search_path TO ''\nAS $function$\nbegin\n  if new.id is distinct from old.id then raise exception 'Record IDs are immutable' using errcode = '42501'; end if;\n  new.created_at := old.created_at;\n  new.updated_at := now();\n  return new;\nend;\n$function$\n"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres"
+      ],
+      "args": "p_organization_id uuid, p_email text, p_role text, p_permissions text[]",
+      "name": "upsert_organization_member",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "private",
+      "definer": true,
+      "definition": "CREATE OR REPLACE FUNCTION private.upsert_organization_member(p_organization_id uuid, p_email text, p_role text, p_permissions text[])\n RETURNS uuid\n LANGUAGE plpgsql\n SECURITY DEFINER\n SET search_path TO ''\nAS $function$\ndeclare v_user uuid; v_old_role text;\nbegin\n  -- Row lock serializes all membership operations and preserves the last owner.\n  perform 1 from public.organizations where id = p_organization_id for update;\n  if not private.has_permission(p_organization_id) then raise exception 'Owner access required' using errcode = '42501'; end if;\n  select id into v_user from auth.users where lower(email) = lower(btrim(p_email));\n  if v_user is null then raise exception 'User must register first' using errcode = '22023'; end if;\n  if p_role not in ('owner','staff') or p_permissions is null or not (p_permissions <@ array['menu','pages','cards','analytics']::text[]) then\n    raise exception 'Invalid role or permissions' using errcode = '22023';\n  end if;\n  select role into v_old_role from public.organization_members where organization_id = p_organization_id and user_id = v_user;\n  if v_old_role = 'owner' and p_role <> 'owner' and (select count(*) from public.organization_members where organization_id = p_organization_id and role = 'owner') <= 1 then\n    raise exception 'Organization requires at least one owner' using errcode = '23514';\n  end if;\n  insert into public.organization_members(organization_id, user_id, role, permissions)\n    values (p_organization_id, v_user, p_role, case when p_role = 'owner' then '{}'::text[] else p_permissions end)\n    on conflict (organization_id, user_id) do update set role = excluded.role, permissions = excluded.permissions;\n  return v_user;\nend;\n$function$\n"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres"
+      ],
+      "args": "p_name text, p_slug text",
+      "name": "create_organization",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "public",
+      "definer": false,
+      "definition": "CREATE OR REPLACE FUNCTION public.create_organization(p_name text, p_slug text)\n RETURNS uuid\n LANGUAGE sql\n SET search_path TO ''\nAS $function$ select private.create_organization(p_name, p_slug); $function$\n"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres"
+      ],
+      "args": "p_organization_id uuid, p_from date, p_to date",
+      "name": "get_analytics",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "public",
+      "definer": false,
+      "definition": "CREATE OR REPLACE FUNCTION public.get_analytics(p_organization_id uuid, p_from date, p_to date)\n RETURNS jsonb\n LANGUAGE sql\n STABLE\n SET search_path TO ''\nAS $function$ select private.get_analytics(p_organization_id,p_from,p_to); $function$\n"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "anon=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "args": "p_path text",
+      "name": "get_public_asset",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "public",
+      "definer": false,
+      "definition": "CREATE OR REPLACE FUNCTION public.get_public_asset(p_path text)\n RETURNS boolean\n LANGUAGE sql\n STABLE\n SET search_path TO ''\nAS $function$ select private.get_public_asset(p_path); $function$\n"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "anon=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "args": "p_slug text",
+      "name": "get_public_page",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "public",
+      "definer": false,
+      "definition": "CREATE OR REPLACE FUNCTION public.get_public_page(p_slug text)\n RETURNS jsonb\n LANGUAGE sql\n STABLE\n SET search_path TO ''\nAS $function$ select private.get_public_page(p_slug); $function$\n"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres"
+      ],
+      "args": "",
+      "name": "is_platform_admin",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "public",
+      "definer": false,
+      "definition": "CREATE OR REPLACE FUNCTION public.is_platform_admin()\n RETURNS boolean\n LANGUAGE sql\n STABLE\n SET search_path TO ''\nAS $function$\n  select private.is_platform_admin();\n$function$\n"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres"
+      ],
+      "args": "",
+      "name": "list_platform_users",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "public",
+      "definer": false,
+      "definition": "CREATE OR REPLACE FUNCTION public.list_platform_users()\n RETURNS TABLE(id uuid, email text, created_at timestamp with time zone)\n LANGUAGE sql\n STABLE\n SET search_path TO ''\nAS $function$ select * from private.list_platform_users(); $function$\n"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres"
+      ],
+      "args": "p_card_id uuid, p_org_id uuid, p_page_id uuid",
+      "name": "reassign_nfc_card",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "public",
+      "definer": false,
+      "definition": "CREATE OR REPLACE FUNCTION public.reassign_nfc_card(p_card_id uuid, p_org_id uuid, p_page_id uuid)\n RETURNS void\n LANGUAGE sql\n SET search_path TO ''\nAS $function$ select private.reassign_nfc_card(p_card_id,p_org_id,p_page_id); $function$\n"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "args": "p_code text, p_source text, p_fingerprint text",
+      "name": "record_scan",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "public",
+      "definer": false,
+      "definition": "CREATE OR REPLACE FUNCTION public.record_scan(p_code text, p_source text, p_fingerprint text)\n RETURNS boolean\n LANGUAGE sql\n SET search_path TO ''\nAS $function$ select private.record_scan(p_code,p_source,p_fingerprint); $function$\n"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres"
+      ],
+      "args": "p_organization_id uuid, p_user_id uuid",
+      "name": "remove_organization_member",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "public",
+      "definer": false,
+      "definition": "CREATE OR REPLACE FUNCTION public.remove_organization_member(p_organization_id uuid, p_user_id uuid)\n RETURNS void\n LANGUAGE sql\n SET search_path TO ''\nAS $function$ select private.remove_organization_member(p_organization_id,p_user_id); $function$\n"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "anon=X/postgres",
+        "authenticated=X/postgres",
+        "service_role=X/postgres"
+      ],
+      "args": "p_code text",
+      "name": "resolve_nfc_card",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "public",
+      "definer": false,
+      "definition": "CREATE OR REPLACE FUNCTION public.resolve_nfc_card(p_code text)\n RETURNS text\n LANGUAGE sql\n STABLE\n SET search_path TO ''\nAS $function$ select private.resolve_nfc_card(p_code); $function$\n"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres"
+      ],
+      "args": "p_query text, p_offset integer, p_limit integer",
+      "name": "search_platform_users",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "public",
+      "definer": false,
+      "definition": "CREATE OR REPLACE FUNCTION public.search_platform_users(p_query text DEFAULT ''::text, p_offset integer DEFAULT 0, p_limit integer DEFAULT 50)\n RETURNS jsonb\n LANGUAGE sql\n STABLE\n SET search_path TO ''\nAS $function$\n  select private.search_platform_users(p_query, p_offset, p_limit);\n$function$\n"
+    },
+    {
+      "acl": [
+        "postgres=X/postgres",
+        "authenticated=X/postgres"
+      ],
+      "args": "p_organization_id uuid, p_email text, p_role text, p_permissions text[]",
+      "name": "upsert_organization_member",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "public",
+      "definer": false,
+      "definition": "CREATE OR REPLACE FUNCTION public.upsert_organization_member(p_organization_id uuid, p_email text, p_role text, p_permissions text[])\n RETURNS uuid\n LANGUAGE sql\n SET search_path TO ''\nAS $function$ select private.upsert_organization_member(p_organization_id,p_email,p_role,p_permissions); $function$\n"
+    }
+  ],
+  "constraints": [
+    {
+      "name": "platform_admins_pkey",
+      "table": "platform_admins",
+      "schema": "private",
+      "validated": true,
+      "definition": "PRIMARY KEY (user_id)"
+    },
+    {
+      "name": "platform_admins_user_id_fkey",
+      "table": "platform_admins",
+      "schema": "private",
+      "validated": true,
+      "definition": "FOREIGN KEY (user_id) REFERENCES auth.users(id) ON DELETE CASCADE"
+    },
+    {
+      "name": "scan_rate_limits_card_id_fkey",
+      "table": "scan_rate_limits",
+      "schema": "private",
+      "validated": true,
+      "definition": "FOREIGN KEY (card_id) REFERENCES nfc_cards(id) ON DELETE CASCADE"
+    },
+    {
+      "name": "scan_rate_limits_fingerprint_check",
+      "table": "scan_rate_limits",
+      "schema": "private",
+      "validated": true,
+      "definition": "CHECK ((fingerprint ~ '^[0-9a-f]{64}$'::text))"
+    },
+    {
+      "name": "scan_rate_limits_pkey",
+      "table": "scan_rate_limits",
+      "schema": "private",
+      "validated": true,
+      "definition": "PRIMARY KEY (card_id, fingerprint)"
+    },
+    {
+      "name": "menu_categories_name_check",
+      "table": "menu_categories",
+      "schema": "public",
+      "validated": true,
+      "definition": "CHECK (((char_length(name) >= 1) AND (char_length(name) <= 100)))"
+    },
+    {
+      "name": "menu_categories_organization_id_fkey",
+      "table": "menu_categories",
+      "schema": "public",
+      "validated": true,
+      "definition": "FOREIGN KEY (organization_id) REFERENCES organizations(id) ON DELETE CASCADE"
+    },
+    {
+      "name": "menu_categories_organization_id_id_key",
+      "table": "menu_categories",
+      "schema": "public",
+      "validated": true,
+      "definition": "UNIQUE (organization_id, id)"
+    },
+    {
+      "name": "menu_categories_pkey",
+      "table": "menu_categories",
+      "schema": "public",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "menu_categories_sort_order_check",
+      "table": "menu_categories",
+      "schema": "public",
+      "validated": true,
+      "definition": "CHECK (((sort_order >= 0) AND (sort_order <= 1000000)))"
+    },
+    {
+      "name": "menu_items_check",
+      "table": "menu_items",
+      "schema": "public",
+      "validated": true,
+      "definition": "CHECK (((image_path IS NULL) OR (image_path ~ (('^'::text || (organization_id)::text) || '/menu/[0-9a-f-]{36}\\.(jpg|jpeg|png|webp)$'::text))))"
+    },
+    {
+      "name": "menu_items_description_check",
+      "table": "menu_items",
+      "schema": "public",
+      "validated": true,
+      "definition": "CHECK ((char_length(description) <= 2000))"
+    },
+    {
+      "name": "menu_items_name_en_check",
+      "table": "menu_items",
+      "schema": "public",
+      "validated": true,
+      "definition": "CHECK ((char_length(name_en) <= 160))"
+    },
+    {
+      "name": "menu_items_name_mn_check",
+      "table": "menu_items",
+      "schema": "public",
+      "validated": true,
+      "definition": "CHECK (((char_length(name_mn) >= 1) AND (char_length(name_mn) <= 160)))"
+    },
+    {
+      "name": "menu_items_organization_id_category_id_fkey",
+      "table": "menu_items",
+      "schema": "public",
+      "validated": true,
+      "definition": "FOREIGN KEY (organization_id, category_id) REFERENCES menu_categories(organization_id, id) ON DELETE RESTRICT"
+    },
+    {
+      "name": "menu_items_organization_id_fkey",
+      "table": "menu_items",
+      "schema": "public",
+      "validated": true,
+      "definition": "FOREIGN KEY (organization_id) REFERENCES organizations(id) ON DELETE CASCADE"
+    },
+    {
+      "name": "menu_items_pkey",
+      "table": "menu_items",
+      "schema": "public",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "menu_items_price_mnt_check",
+      "table": "menu_items",
+      "schema": "public",
+      "validated": true,
+      "definition": "CHECK (((price_mnt >= 0) AND (price_mnt <= '1000000000000'::bigint)))"
+    },
+    {
+      "name": "menu_items_sort_order_check",
+      "table": "menu_items",
+      "schema": "public",
+      "validated": true,
+      "definition": "CHECK (((sort_order >= 0) AND (sort_order <= 1000000)))"
+    },
+    {
+      "name": "nfc_cards_code_check",
+      "table": "nfc_cards",
+      "schema": "public",
+      "validated": true,
+      "definition": "CHECK ((code ~ '^[0-9a-f]{24}$'::text))"
+    },
+    {
+      "name": "nfc_cards_code_key",
+      "table": "nfc_cards",
+      "schema": "public",
+      "validated": true,
+      "definition": "UNIQUE (code)"
+    },
+    {
+      "name": "nfc_cards_name_check",
+      "table": "nfc_cards",
+      "schema": "public",
+      "validated": true,
+      "definition": "CHECK (((char_length(name) >= 1) AND (char_length(name) <= 120)))"
+    },
+    {
+      "name": "nfc_cards_organization_id_fkey",
+      "table": "nfc_cards",
+      "schema": "public",
+      "validated": true,
+      "definition": "FOREIGN KEY (organization_id) REFERENCES organizations(id) ON DELETE CASCADE"
+    },
+    {
+      "name": "nfc_cards_organization_id_page_id_fkey",
+      "table": "nfc_cards",
+      "schema": "public",
+      "validated": true,
+      "definition": "FOREIGN KEY (organization_id, page_id) REFERENCES pages(organization_id, id) ON DELETE RESTRICT"
+    },
+    {
+      "name": "nfc_cards_pkey",
+      "table": "nfc_cards",
+      "schema": "public",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "organization_members_organization_id_fkey",
+      "table": "organization_members",
+      "schema": "public",
+      "validated": true,
+      "definition": "FOREIGN KEY (organization_id) REFERENCES organizations(id) ON DELETE CASCADE"
+    },
+    {
+      "name": "organization_members_permissions_check",
+      "table": "organization_members",
+      "schema": "public",
+      "validated": true,
+      "definition": "CHECK ((permissions <@ ARRAY['menu'::text, 'pages'::text, 'cards'::text, 'analytics'::text]))"
+    },
+    {
+      "name": "organization_members_pkey",
+      "table": "organization_members",
+      "schema": "public",
+      "validated": true,
+      "definition": "PRIMARY KEY (organization_id, user_id)"
+    },
+    {
+      "name": "organization_members_role_check",
+      "table": "organization_members",
+      "schema": "public",
+      "validated": true,
+      "definition": "CHECK ((role = ANY (ARRAY['owner'::text, 'staff'::text])))"
+    },
+    {
+      "name": "organization_members_user_id_fkey",
+      "table": "organization_members",
+      "schema": "public",
+      "validated": true,
+      "definition": "FOREIGN KEY (user_id) REFERENCES auth.users(id) ON DELETE RESTRICT"
+    },
+    {
+      "name": "organizations_canonical_slug",
+      "table": "organizations",
+      "schema": "public",
+      "validated": false,
+      "definition": "CHECK ((slug ~ '^[a-z0-9]+(-[a-z0-9]+)*$'::text)) NOT VALID"
+    },
+    {
+      "name": "organizations_check",
+      "table": "organizations",
+      "schema": "public",
+      "validated": true,
+      "definition": "CHECK (((logo_path IS NULL) OR (logo_path ~ (('^'::text || (id)::text) || '/branding/[0-9a-f-]{36}\\.(jpg|jpeg|png|webp)$'::text))))"
+    },
+    {
+      "name": "organizations_check1",
+      "table": "organizations",
+      "schema": "public",
+      "validated": true,
+      "definition": "CHECK (((cover_path IS NULL) OR (cover_path ~ (('^'::text || (id)::text) || '/branding/[0-9a-f-]{36}\\.(jpg|jpeg|png|webp)$'::text))))"
+    },
+    {
+      "name": "organizations_contact_urls",
+      "table": "organizations",
+      "schema": "public",
+      "validated": false,
+      "definition": "CHECK ((((maps_url = ''::text) OR (maps_url ~ '^https://[^/@[:space:]]+([/?#][^[:space:]]*)?$'::text)) AND ((facebook_url = ''::text) OR (facebook_url ~ '^https://[^/@[:space:]]+([/?#][^[:space:]]*)?$'::text)) AND ((instagram_url = ''::text) OR (instagram_url ~ '^https://[^/@[:space:]]+([/?#][^[:space:]]*)?$'::text)) AND ((website_url = ''::text) OR (website_url ~ '^https://[^/@[:space:]]+([/?#][^[:space:]]*)?$'::text)))) NOT VALID"
+    },
+    {
+      "name": "organizations_description_check",
+      "table": "organizations",
+      "schema": "public",
+      "validated": true,
+      "definition": "CHECK ((char_length(description) <= 4000))"
+    },
+    {
+      "name": "organizations_facebook_url_check",
+      "table": "organizations",
+      "schema": "public",
+      "validated": true,
+      "definition": "CHECK (((facebook_url = ''::text) OR (facebook_url ~ '^https://'::text)))"
+    },
+    {
+      "name": "organizations_instagram_url_check",
+      "table": "organizations",
+      "schema": "public",
+      "validated": true,
+      "definition": "CHECK (((instagram_url = ''::text) OR (instagram_url ~ '^https://'::text)))"
+    },
+    {
+      "name": "organizations_maps_url_check",
+      "table": "organizations",
+      "schema": "public",
+      "validated": true,
+      "definition": "CHECK (((maps_url = ''::text) OR (maps_url ~ '^https://'::text)))"
+    },
+    {
+      "name": "organizations_name_check",
+      "table": "organizations",
+      "schema": "public",
+      "validated": true,
+      "definition": "CHECK (((char_length(name) >= 2) AND (char_length(name) <= 120)))"
+    },
+    {
+      "name": "organizations_nonblank_name",
+      "table": "organizations",
+      "schema": "public",
+      "validated": false,
+      "definition": "CHECK ((char_length(btrim(name)) >= 2)) NOT VALID"
+    },
+    {
+      "name": "organizations_pkey",
+      "table": "organizations",
+      "schema": "public",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "organizations_primary_color_check",
+      "table": "organizations",
+      "schema": "public",
+      "validated": true,
+      "definition": "CHECK ((primary_color ~ '^#[0-9a-fA-F]{6}$'::text))"
+    },
+    {
+      "name": "organizations_profile_lengths",
+      "table": "organizations",
+      "schema": "public",
+      "validated": false,
+      "definition": "CHECK (((char_length(phone) <= 40) AND (char_length(email) <= 254) AND (char_length(address) <= 200) AND (char_length(maps_url) <= 2048) AND (char_length(facebook_url) <= 2048) AND (char_length(instagram_url) <= 2048) AND (char_length(website_url) <= 2048))) NOT VALID"
+    },
+    {
+      "name": "organizations_secondary_color_check",
+      "table": "organizations",
+      "schema": "public",
+      "validated": true,
+      "definition": "CHECK ((secondary_color ~ '^#[0-9a-fA-F]{6}$'::text))"
+    },
+    {
+      "name": "organizations_slug_check",
+      "table": "organizations",
+      "schema": "public",
+      "validated": true,
+      "definition": "CHECK ((slug ~ '^[a-z0-9][a-z0-9-]{1,78}[a-z0-9]$'::text))"
+    },
+    {
+      "name": "organizations_slug_key",
+      "table": "organizations",
+      "schema": "public",
+      "validated": true,
+      "definition": "UNIQUE (slug)"
+    },
+    {
+      "name": "organizations_website_url_check",
+      "table": "organizations",
+      "schema": "public",
+      "validated": true,
+      "definition": "CHECK (((website_url = ''::text) OR (website_url ~ '^https://'::text)))"
+    },
+    {
+      "name": "pages_check",
+      "table": "pages",
+      "schema": "public",
+      "validated": true,
+      "definition": "CHECK (((NOT (content ? 'photo_path'::text)) OR ((content ->> 'photo_path'::text) IS NULL) OR ((content ->> 'photo_path'::text) ~ (('^'::text || (organization_id)::text) || '/pages/[0-9a-f-]{36}\\.(jpg|jpeg|png|webp)$'::text))))"
+    },
+    {
+      "name": "pages_content_check",
+      "table": "pages",
+      "schema": "public",
+      "validated": true,
+      "definition": "CHECK (((jsonb_typeof(content) = 'object'::text) AND (octet_length((content)::text) <= 50000)))"
+    },
+    {
+      "name": "pages_description_check",
+      "table": "pages",
+      "schema": "public",
+      "validated": true,
+      "definition": "CHECK ((char_length(description) <= 4000))"
+    },
+    {
+      "name": "pages_organization_id_fkey",
+      "table": "pages",
+      "schema": "public",
+      "validated": true,
+      "definition": "FOREIGN KEY (organization_id) REFERENCES organizations(id) ON DELETE CASCADE"
+    },
+    {
+      "name": "pages_organization_id_id_key",
+      "table": "pages",
+      "schema": "public",
+      "validated": true,
+      "definition": "UNIQUE (organization_id, id)"
+    },
+    {
+      "name": "pages_pkey",
+      "table": "pages",
+      "schema": "public",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "pages_slug_check",
+      "table": "pages",
+      "schema": "public",
+      "validated": true,
+      "definition": "CHECK ((slug ~ '^[a-z0-9][a-z0-9-]{1,78}[a-z0-9]$'::text))"
+    },
+    {
+      "name": "pages_slug_key",
+      "table": "pages",
+      "schema": "public",
+      "validated": true,
+      "definition": "UNIQUE (slug)"
+    },
+    {
+      "name": "pages_title_check",
+      "table": "pages",
+      "schema": "public",
+      "validated": true,
+      "definition": "CHECK (((char_length(title) >= 1) AND (char_length(title) <= 160)))"
+    },
+    {
+      "name": "pages_type_check",
+      "table": "pages",
+      "schema": "public",
+      "validated": true,
+      "definition": "CHECK ((type = ANY (ARRAY['menu'::text, 'company'::text, 'business_card'::text, 'links'::text])))"
+    },
+    {
+      "name": "scan_events_card_id_fkey",
+      "table": "scan_events",
+      "schema": "public",
+      "validated": true,
+      "definition": "FOREIGN KEY (card_id) REFERENCES nfc_cards(id) ON DELETE CASCADE"
+    },
+    {
+      "name": "scan_events_organization_id_fkey",
+      "table": "scan_events",
+      "schema": "public",
+      "validated": true,
+      "definition": "FOREIGN KEY (organization_id) REFERENCES organizations(id) ON DELETE CASCADE"
+    },
+    {
+      "name": "scan_events_pkey",
+      "table": "scan_events",
+      "schema": "public",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "scan_events_source_check",
+      "table": "scan_events",
+      "schema": "public",
+      "validated": true,
+      "definition": "CHECK ((source = ANY (ARRAY['qr'::text, 'unknown'::text])))"
+    }
+  ],
+  "auth_user_count": 0,
+  "storage_object_count": 0
+}

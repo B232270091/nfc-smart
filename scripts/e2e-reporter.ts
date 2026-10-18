@@ -9,7 +9,13 @@ export default class SafeE2EReporter implements Reporter {
   }
   onTestEnd(test: TestCase, result: TestResult) {
     console.log(`[E2E] ${result.status}: ${test.title} (${Math.round(result.duration / 1000)}s)`);
-    if (result.errors.length) console.log(`[E2E] ${result.errors.length} error(s) at ${test.location.file}:${test.location.line}; raw credential-bearing diagnostics suppressed.`);
+    if (result.errors.length) {
+      console.log(`[E2E] ${result.errors.length} error(s) at ${test.location.file}:${test.location.line}; raw credential-bearing diagnostics suppressed.`);
+      // Emit only source coordinates, never assertion messages, values or call logs.
+      const locations = new Set(result.errors.flatMap(error =>
+        error.stack?.match(/(?:tests|scripts)[\\/][\w./\\-]+\.[cm]?[jt]sx?:\d+:\d+/g) ?? []));
+      for (const location of locations) console.log(`[E2E source] ${location}`);
+    }
   }
   onStdOut(chunk: string | Buffer) {
     const text = chunk.toString().trim();

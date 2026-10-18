@@ -12,25 +12,22 @@ This suite exercises the running application, Supabase Auth, PostgreSQL RLS, and
 
 The test registers its first user through the registration screen. A server-side administrative key confirms that generated account so a real mailbox is unnecessary. The key is never sent to the browser. The second test user exists solely for tenant isolation checks.
 
-Set these variables in the shell that runs Playwright:
+Store the dedicated test project's modern publishable and secret keys in the Git-ignored `.env.e2e.local`. Legacy JWT keys and shell-only credential configuration are not supported. Follow [test environment setup](../../docs/test-environment.md) for the complete file format and project identity verification.
 
-- `E2E_ENABLED=1`
-- `NEXT_PUBLIC_SUPABASE_URL`
-- `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`
-- `SUPABASE_SECRET_KEY` (Supabase secret key or legacy service-role key for the test project)
-- Do not set `E2E_BASE_URL` for integration tests: the runner must start a fresh local server with test-only environment variables.
+Only `nfc-smart-test` (`khohnhjjyetwuzfsttkl`) is permitted. Verification checks both project identities and tests the keys with read-only requests. It requires a local Management token or recent identity metadata obtained by the connected Supabase agent. Never fabricate verification metadata.
 
-By default Playwright starts Next.js at `http://127.0.0.1:3100` and sets `NEXT_PUBLIC_APP_URL` to that origin. With explicit `E2E_ENABLED=1`, the runner loads **only `.env.e2e.local`**, never production `.env.local`. Set `E2E_SUPABASE_PROJECT_REF` to the separate test project reference. The production project `xcsnkvoulmrpxoxcjuvl`, mismatched project references and non-local app URLs are rejected before any client/server starts. See [test environment setup](../../docs/test-environment.md).
+The integration runner enables `E2E_ENABLED=1` only in its child process and starts a fresh Next.js server at `http://127.0.0.1:3100`, using `.next-e2e`. Test credentials come exclusively from `.env.e2e.local`; `.env.local` is read only for isolation checks and is not modified. Do not set `E2E_BASE_URL`, and keep port 3100 free.
 
 ```powershell
-npx.cmd playwright install chromium
-$env:E2E_ENABLED = '1'
-# Set the three Supabase variables in this shell without committing them.
-npm.cmd run test:e2e
+$env:PLAYWRIGHT_CHANNEL = 'msedge' # Or install Playwright Chromium.
+npm.cmd run e2e:verify
+npm.cmd run test:e2e:integration
 ```
 
 When `E2E_ENABLED` is not `1`, the Supabase workflow explicitly reports one skipped test. Passing public-screen tests does not verify that workflow. Enabling the integration test without a required variable fails rather than silently skipping.
 
-Covered workflow: real registration → organization creation and branding image upload → category creation → menu item creation → draft privacy → page publication → NFC registration → QR PNG download → permanent-link redirect → price change visible through the same link → second-tenant read/write and cross-reference denial → NFC deactivation. Browser traces and screenshots are retained on failure.
+Covered workflow: real registration → organization creation and branding image upload → category creation → menu item creation → draft privacy → page publication → NFC registration → QR PNG download → permanent-link redirect → price change visible through the same link → second-tenant read/write/delete, cross-reference and Storage denial → NFC deactivation → owner menu deletion → logout and protected access → cleanup.
+
+Integration traces and screenshots are disabled, test output files are removed, and the safe reporter prints workflow status and source coordinates without raw API errors, passwords, cookies or call logs. Public smoke runs retain failure diagnostics.
 
 If a test is interrupted before cleanup, the generated accounts are named `nfc-e2e-<run>@example.com` and `nfc-e2e-other-<run>@example.com`; organizations use matching unique `e2e-<run>` slugs. Inspect exact IDs before manually cleaning up any interrupted run. Never delete all users or all organizations to reset a test.

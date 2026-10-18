@@ -2,6 +2,41 @@
 
 Энэ файл бодитоор хэрэгжүүлсэн болон гаднын орчноор баталгаажаагүй ажлыг тусад нь тэмдэглэнэ.
 
+## 2026-10-17 — Backup/recovery бэлтгэл
+
+- [Дэлгэрэнгүй заавар](production-backup-recovery.md): organization Free Plan батлагдсан; production 2 confirmed/password-hash бүхий Auth user, 2 email identity, 3 session, Storage object 0. Нууц утгуудыг гаргаагүй.
+- CLI fixture dry-run-аар schema/data backup-ийн ялгааг шалгасан. Read-only/TLS option forwarding батлагдаагүй тул native PostgreSQL 17 client-ийн explicit read-only export арга бэлтгэсэн.
+- Offline production-like migration rehearsal 4/4, 18/18 check PASS; synthetic Auth өгөгдөл хадгалагдсан. Remote CLI migration dry-run, real backup/export/restore хараахан хийгдээгүй.
+- Production өөрчлөлт хийгээгүй. Existing DB credential, client tools, encrypted backup, recovery drill-ийн нотолгооны дараа хэрэглэгчээс migration зөвшөөрөл шинээр авна.
+
+## 2026-10-17 — Production deployment preparation
+
+- [Монгол тайлан, migration жагсаалт, Vercel/Auth/Resend заавар, backup/rollback төлөвлөгөө](production-deployment-preparation.md) бэлэн. Production өөрчлөлт хийгээгүй.
+- Production/test catalog snapshot авсан: production app schema 0, test 9 хүснэгт/4 migration; production 2 Auth хэрэглэгчтэй. Production organization-assets public байгаа тул migration 1-ийн private өөрчлөлтийг approval scope-д оруулсан.
+- Vercel config, Node 24, build environment isolation guard, CI runtime audit gate бэлтгэсэн. Upload тус бүр 2 MB, body limit 4 MiB болгосон.
+- Lint, TypeScript, 94 unit test, 131 DB assertion, production build тэнцсэн. Runtime audit 0; patched release байхгүй braces advisory-оос дамжсан 5 dev high entry нээлттэй.
+- Нийтийн launch-ийн өмнө SMTP sender/domain, бодит Vercel alias, production Auth URLs, leaked-password protection болон backup restore drill-ийг баталгаажуулна.
+
+## 2026-10-17 — Бодит E2E баталгаажуулалт ба release бэлтгэл
+
+- Тусдаа `nfc-smart-test (khohnhjjyetwuzfsttkl)` төсөлд 4 migration хэрэгжсэн; орчны URL, publishable/secret key болон production-оос тусгаарлалтыг баталгаажуулсан.
+- Edge/Playwright-ийн эцсийн suite **6/6 тэнцсэн**: 5 public smoke болон 1 бодит Auth → organization/Storage → menu/publication → NFC/QR → price update → tenant isolation → disable/delete/logout workflow. Дэлгэрэнгүй нь [тестийн тайлан](test-environment.md#2026-10-17-ны-эцсийн-шалгалт).
+- Streamed Next.js not-found хуудасны HTTP 200/404 ялгааг E2E-д зөв тооцож, denial heading, noindex, edit form болон хувийн item нэр байхгүйг заавал шалгадаг болгосон. Authorization/RLS өөрчлөөгүй.
+- Reporter нь raw error/call logs хэвлэхгүйгээр source coordinates харуулна; integration үед explicit smoke screenshot мөн унтарна. Тестийн зааврыг modern keys болон verified runner-тэй нийцүүлсэн.
+- Cleanup дараа Auth users, organizations/members, categories/items, pages, cards болон private Storage objects бүгд 0. Түр унтраасан Confirm Email-ийг хэрэглэгч сэргээж, Auth API HTTP 200 / `mailer_autoconfirm=false` гэж дахин баталсан.
+- 2026-10-17-ны `npm.cmd run check` **exit 0**: ESLint, TypeScript, **74 unit тест**, **131 PostgreSQL integration/security assertion**, optimized production build бүгд тэнцсэн.
+- Runtime dependency audit **0 vulnerability**. Development tooling-ийн `braces` dependency chain-д **5 high advisory** хэвээр; санал болгосон force-fix нь Next ESLint-ийг 14.x руу буулгах breaking change тул хэрэгжүүлээгүй.
+- Production read-only inspection: migration history хоосон; `organizations`, `menu_items`, `pages`, `nfc_cards`, `get_public_page(text)`, `resolve_nfc_card(text)` байхгүй. Production schema/data болон `.env.local` өөрчлөгдөөгүй.
+
+### Үлдсэн release acceptance
+
+1. Production migration-ийн 4 файлыг review хийж, тусад нь зөвшөөрсний дараа хэрэгжүүлэх; RLS/RPC/private bucket-ийг шалгах. Одоогийн production-only-read хязгаарлалт хүчинтэй.
+2. Vercel environment болон тогтмол HTTPS domain, server-only secret/analytics тохиргоо, Auth redirect allowlist бэлтгэж deployment баталгаажуулах.
+3. Бодит SMTP email confirmation/password recovery callback, hosted analytics, admin/staff UI, public зураг болон vCard-ийн төхөөрөмжийн шалгалтыг гүйцээх. Local SQL/unit coverage нь эдгээр hosted/browser/device шалгалтыг орлохгүй.
+4. Хоёр өөр утсан дээр биет NFC tap болон QR fallback турших.
+
+Доорх хуучин огноотой тэмдэглэлүүд нь тухайн үеийн төлөв; cloud E2E хүлээгдэж байсан тэмдэглэлүүдийг дээрх үр дүн шинэчилнэ.
+
 ## 2026-10-14 — Phase 2: байгууллагын удирдлага
 
 - Хэрэглэгч Supabase registration/login/logout/protected pages ажиллаж байгааг баталгаажуулсан. Auth action, SSR client, session proxy, callback кодыг энэ өөрчлөлтөөр солиогүй.

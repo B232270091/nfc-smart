@@ -1,5 +1,6 @@
 import { messages } from '@/lib/messages/mn';
 import type { SupabaseClient } from '@supabase/supabase-js';
+import { MAX_IMAGE_BYTES } from '@/lib/upload-limits';
 export function assetUrl(path:string|null|undefined){return path?`/api/assets/${path.split('/').map(encodeURIComponent).join('/')}`:'';}
 export function imageType(bytes:Uint8Array):'png'|'jpg'|'webp'|null {
   if(bytes.length<12)return null;
@@ -9,7 +10,7 @@ export function imageType(bytes:Uint8Array):'png'|'jpg'|'webp'|null {
   return null;
 }
 export async function uploadAsset(supabase:SupabaseClient,orgId:string,file:File,scope:'branding'|'menu'|'pages'='menu'):Promise<string>{
-  if(file.size===0||file.size>5*1024*1024)throw new Error(messages.libStorage.message);
+  if(file.size===0||file.size>MAX_IMAGE_BYTES)throw new Error(messages.libStorage.message);
   const bytes=new Uint8Array(await file.arrayBuffer());const extension=imageType(bytes);const mime={png:'image/png',jpg:'image/jpeg',webp:'image/webp'};
   if(!extension||file.type!==mime[extension])throw new Error(messages.libStorage.message2);
   const path=`${orgId}/${scope}/${crypto.randomUUID()}.${extension}`;

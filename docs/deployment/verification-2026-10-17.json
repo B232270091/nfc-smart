@@ -1,0 +1,117 @@
+{
+  "checkedDate": "2026-10-17",
+  "production": {
+    "migrations": {
+      "migrations": []
+    },
+    "advisors": {
+      "result": {
+        "lints": [
+          {
+            "name": "auth_leaked_password_protection",
+            "title": "Leaked Password Protection Disabled",
+            "level": "WARN",
+            "facing": "EXTERNAL",
+            "categories": [
+              "SECURITY"
+            ],
+            "description": "Leaked password protection is currently disabled.",
+            "remediation": "https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection",
+            "count": 1,
+            "findings": [
+              {
+                "detail": "Supabase Auth prevents the use of compromised passwords by checking against HaveIBeenPwned.org. Enable this feature to enhance security.",
+                "metadata": {
+                  "type": "auth",
+                  "entity": "Auth"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "authPublicSettings": {
+      "httpStatus": 200,
+      "emailConfirmationRequired": true,
+      "emailEnabled": true,
+      "signupDisabled": false,
+      "phoneEnabled": false
+    },
+    "privateSchemaProbe": {
+      "httpStatus": 406,
+      "code": "PGRST106"
+    }
+  },
+  "test": {
+    "migrations": {
+      "migrations": [
+        {
+          "version": "20261012111118",
+          "name": "nfc_smart_initial"
+        },
+        {
+          "version": "20261012154811",
+          "name": "analytics_aggregates"
+        },
+        {
+          "version": "20261013164143",
+          "name": "organization_profile_hardening"
+        },
+        {
+          "version": "20261013200319",
+          "name": "platform_user_pagination"
+        }
+      ]
+    },
+    "advisors": {
+      "result": {
+        "lints": [
+          {
+            "name": "rls_enabled_no_policy",
+            "title": "RLS Enabled No Policy",
+            "level": "INFO",
+            "facing": "EXTERNAL",
+            "categories": [
+              "SECURITY"
+            ],
+            "description": "Detects cases where row level security (RLS) has been enabled on a table but no RLS policies have been created.",
+            "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy",
+            "count": 2,
+            "findings": [
+              {
+                "detail": "Table \\`private.platform_admins\\` has RLS enabled, but no policies exist",
+                "metadata": {
+                  "name": "platform_admins",
+                  "type": "table",
+                  "schema": "private"
+                },
+                "observed_at": "2026-10-17T05:37:25.164Z"
+              },
+              {
+                "detail": "Table \\`private.scan_rate_limits\\` has RLS enabled, but no policies exist",
+                "metadata": {
+                  "name": "scan_rate_limits",
+                  "type": "table",
+                  "schema": "private"
+                },
+                "observed_at": "2026-10-17T05:37:25.164Z"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "authPublicSettings": {
+      "httpStatus": 200,
+      "emailConfirmationRequired": true,
+      "emailEnabled": true,
+      "signupDisabled": false,
+      "phoneEnabled": false
+    },
+    "privateSchemaProbe": {
+      "httpStatus": 406,
+      "code": "PGRST106"
+    }
+  }
+}

@@ -12,7 +12,9 @@ for (const width of [390, 1440]) {
       await page.evaluate(() => document.fonts.ready);
       const dimensions = await page.evaluate(() => ({ content: document.documentElement.scrollWidth, viewport: document.documentElement.clientWidth }));
       expect(dimensions.content, `${route} overflows at ${width}px`).toBeLessThanOrEqual(dimensions.viewport + 1);
-      if (route === "/" || route === "/login") await page.screenshot({ path: testInfo.outputPath(`${route === "/" ? "home" : "login"}-${width}.png`), fullPage: true });
+      if (process.env.E2E_ENABLED !== '1' && (route === "/" || route === "/login")) {
+        await page.screenshot({ path: testInfo.outputPath(`${route === "/" ? "home" : "login"}-${width}.png`), fullPage: true });
+      }
     }
     expect(clientErrors).toEqual([]);
   });

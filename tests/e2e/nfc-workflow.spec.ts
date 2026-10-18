@@ -245,8 +245,13 @@ test("register → publish menu → reuse permanent NFC URL after edit → disab
       try {
         const otherPage = await deniedBrowser.newPage();
         await login(otherPage, otherEmail, password);
-        expect((await otherPage.goto(`/dashboard/menu/${itemId}`))?.status()).toBe(404);
+        const deniedResponse = await otherPage.goto(`/dashboard/menu/${itemId}`);
+        // A streamed Next.js notFound() renders the denial UI with HTTP 200.
+        expect([200, 404]).toContain(deniedResponse?.status());
+        await expect(otherPage.getByRole('heading', { name: 'Хуудас олдсонгүй', exact: true })).toBeVisible();
+        await expect(otherPage.locator('meta[name="robots"][content*="noindex"]').first()).toBeAttached();
         await expect(otherPage.locator('input[name="name_mn"]')).toHaveCount(0);
+        await expect(otherPage.getByText(itemName, { exact: true })).toHaveCount(0);
       } finally { await deniedBrowser.close(); }
     });
 

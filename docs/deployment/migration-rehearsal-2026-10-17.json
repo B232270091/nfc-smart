@@ -1,0 +1,47 @@
+{
+  "kind": "offline-synthetic-migration-rehearsal",
+  "productionContacted": false,
+  "realBackupRestored": false,
+  "migrations": [
+    {
+      "name": "20261012111118_nfc_smart_initial.sql",
+      "sha256": "19654940a862357789ee9f68476987dd1211f82588691a3a055774156471991b",
+      "status": "passed"
+    },
+    {
+      "name": "20261012154811_analytics_aggregates.sql",
+      "sha256": "6a9b22342ec3a8bee531e8ce8cccb5e72cf3159005bd0ebe17895d0c0a34ac82",
+      "status": "passed"
+    },
+    {
+      "name": "20261013164143_organization_profile_hardening.sql",
+      "sha256": "672afed4f58cced31bc38d2eb5aad68be153be7be4d38fe3bceda342bec64d4b",
+      "status": "passed"
+    },
+    {
+      "name": "20261013200319_platform_user_pagination.sql",
+      "sha256": "e6004cfdadf6de38d427a058266e873019b33c45e1c54bc9ab7454bcde316a23",
+      "status": "passed"
+    }
+  ],
+  "checks": [
+    "20261012111118_nfc_smart_initial.sql: reviewed checksum matches",
+    "20261012111118_nfc_smart_initial.sql: users/password placeholders/identities/sessions unchanged",
+    "20261012154811_analytics_aggregates.sql: reviewed checksum matches",
+    "20261012154811_analytics_aggregates.sql: users/password placeholders/identities/sessions unchanged",
+    "20261013164143_organization_profile_hardening.sql: reviewed checksum matches",
+    "20261013164143_organization_profile_hardening.sql: users/password placeholders/identities/sessions unchanged",
+    "20261013200319_platform_user_pagination.sql: reviewed checksum matches",
+    "20261013200319_platform_user_pagination.sql: users/password placeholders/identities/sessions unchanged",
+    "Nine app tables created",
+    "All app tables have RLS",
+    "Twenty app and four Storage policies created",
+    "Legacy bucket unchanged",
+    "Existing organization-assets becomes private",
+    "Existing organization-assets ceiling becomes 5 MiB",
+    "Storage objects unchanged",
+    "Four NOT VALID profile constraints retained as reviewed",
+    "No administrator enrolled",
+    "No seed organizations inserted"
+  ]
+}

@@ -79,7 +79,23 @@ npm.cmd run test:e2e -- tests/e2e/public-smoke.spec.ts
 
 Unit болон PGlite PostgreSQL нь Supabase руу холбогдохгүй. Smoke нь mutation form submit хийхгүй. Disabled/blocked integration-ийг pass гэж тайлагнахгүй.
 
-## 2026-10-15-ны энэ сессийн төлөв
+## 2026-10-17-ны эцсийн шалгалт
+
+Connector-оор хоёр төслийн нэр/ID, ижил organization болон `ACTIVE_HEALTHY` төлөвийг дахин баталгаажуулж, хугацаа дууссан локал identity metadata-г шинэчилсэн. `npm.cmd run e2e:verify` амжилттай: локал publishable/secret key зөвхөн `nfc-smart-test (khohnhjjyetwuzfsttkl)` төсөлтэй тохирсон. Дөрвөн migration history хэвээр байна.
+
+`PLAYWRIGHT_CHANNEL=msedge` ашиглан `npm.cmd run test:e2e:integration` ажиллуулсан. Эцсийн run: **6/6 тест тэнцсэн — 1 бодит integration workflow, 5 public smoke тест**. `.last-run.json` нь `status=passed`, `failedTests=[]`; integration workflow 59 секундэд тэнцсэн. Бүртгэл/login, байгууллага/branding upload, category/menu CRUD, draft privacy/publication, NFC redirect, QR PNG download, ижил NFC URL-аар шинэ үнэ харагдах, хоёр tenant-ийн read/update/delete/cross-link/Storage/browser тусгаарлалт, NFC disable, owner delete confirmation, logout болон cleanup батлагдсан.
+
+Эхний run-ийн `/signup` нь `400 / email_address_invalid` буцаасан. Хэрэглэгчийн зөвшөөрлөөр зөвхөн тестийн төслийн `Confirm email`-ийг түр унтраасны дараа бүртгэл тэнцсэн. Дараагийн run-ийн browser tenant-denial assertion нь Next.js streaming-ийн HTTP 200 not-found response-ийг буруу уналт гэж үзсэн. Суусан Next.js зааврын дагуу HTTP 200/404-ийг зөвшөөрөхийн хамт “Хуудас олдсонгүй” heading, `noindex`, edit form болон хувийн item нэр байхгүйг заавал шалгадаг болгосны дараа бүх suite тэнцсэн. Application authorization/RLS-ийг сулруулаагүй.
+
+**Confirm email сэргэсэн:** хэрэглэгч тестийн Dashboard дээр Confirm email ON → Save changes хийсэн. 2026-10-17-нд read-only `/auth/v1/settings` хүсэлт HTTP 200, `mailer_autoconfirm=false` (`emailConfirmationRequired=true`) буцааснаар сэргээснийг баталсан. Түр өөрчилсөн Auth тохиргооны үлдсэн ажил байхгүй. Дараагийн registration E2E run-д тохирох test SMTP эсвэл дахин зөвшөөрсөн түр тохиргоо шаардлагатай; production тохиргоо өөрчлөхгүй.
+
+`finally` cleanup ажилласан. 2026-10-17-ны read-only SQL шалгалтаар Auth users, organizations, organization_members, menu_categories, menu_items, pages, nfc_cards болон `organization-assets` objects бүгд 0. Production `.env.local`-ийн SHA-256 өмнөхтэй ижил; production-д зөвхөн project metadata уншсан. Integration artifact directory-д зөвхөн нууц мэдээлэлгүй `.last-run.json` үлдсэн.
+
+Safe reporter нь нууц утга/алдааны body хэвлэхгүйгээр source coordinates гаргадаг болсон. Public smoke-ийн explicit screenshot-ийг integration үед мөн хаасан. Browser test README-ийн хуучин shell/legacy key болон artifact зааврыг бодит runner-тэй нийцүүлсэн. Lint, TypeScript болон E2E safety-ийн 9 unit тест тэнцсэн.
+
+Confirm Email сэргэсэн дараах `npm.cmd run check` мөн exit 0: lint, TypeScript, нийт 74 unit тест, 131 PostgreSQL assertion болон production build тэнцсэн. Runtime dependency audit 0 vulnerability; dev tooling-ийн 5 high advisory тусдаа үлдсэн.
+
+## 2026-10-15-ны өмнөх сессийн төлөв
 
 Connector-ийн project list хоосон боловч user өгсөн ID-аар `get_project`, organization metadata, read-only SQL болон migration apply бүгд ажилласан. Иймээс дахин холбох шаардлага одоогоор алга; account-wide discovery-г төслийн хандалтгүй гэж дүгнэж болохгүй. CLI login token шаардах боловч connector migration-д CLI ашиглаагүй.
 

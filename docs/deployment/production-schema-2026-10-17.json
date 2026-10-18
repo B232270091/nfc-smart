@@ -1,0 +1,725 @@
+{
+  "grants": [
+    {
+      "grantee": "anon",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "anon",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "anon",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "anon",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "REFERENCES",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "TRIGGER",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "TRUNCATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "anon",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_analytics",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "anon",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_analytics",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "anon",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_analytics",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "anon",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_analytics",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_analytics",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_analytics",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_analytics",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_analytics",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_analytics",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_analytics",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_analytics",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "REFERENCES",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_analytics",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_analytics",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "TRIGGER",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_analytics",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "TRUNCATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_analytics",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "anon",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_vectors",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_vectors",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "buckets_vectors",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "anon",
+      "grantor": "supabase_storage_admin",
+      "table_name": "objects",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "anon",
+      "grantor": "supabase_storage_admin",
+      "table_name": "objects",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "anon",
+      "grantor": "supabase_storage_admin",
+      "table_name": "objects",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "anon",
+      "grantor": "supabase_storage_admin",
+      "table_name": "objects",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "supabase_storage_admin",
+      "table_name": "objects",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "supabase_storage_admin",
+      "table_name": "objects",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "supabase_storage_admin",
+      "table_name": "objects",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "supabase_storage_admin",
+      "table_name": "objects",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "objects",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "objects",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "objects",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "REFERENCES",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "objects",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "objects",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "TRIGGER",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "objects",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "TRUNCATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "objects",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "anon",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "REFERENCES",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "TRIGGER",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "TRUNCATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "anon",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads_parts",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads_parts",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads_parts",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads_parts",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads_parts",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "REFERENCES",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads_parts",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads_parts",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "TRIGGER",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads_parts",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "TRUNCATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "s3_multipart_uploads_parts",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "anon",
+      "grantor": "supabase_storage_admin",
+      "table_name": "vector_indexes",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "supabase_storage_admin",
+      "table_name": "vector_indexes",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "service_role",
+      "grantor": "supabase_storage_admin",
+      "table_name": "vector_indexes",
+      "is_grantable": "NO",
+      "table_schema": "storage",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    }
+  ],
+  "tables": [],
+  "buckets": [
+    {
+      "id": "menu-images",
+      "public": true,
+      "file_size_limit": 5242880,
+      "allowed_mime_types": [
+        "image/jpeg",
+        "image/png",
+        "image/webp"
+      ]
+    },
+    {
+      "id": "organization-assets",
+      "public": true,
+      "file_size_limit": 2097152,
+      "allowed_mime_types": [
+        "image/jpeg",
+        "image/png",
+        "image/webp"
+      ]
+    }
+  ],
+  "columns": [],
+  "indexes": [],
+  "policies": [],
+  "triggers": [],
+  "functions": [],
+  "constraints": [],
+  "auth_user_count": 2,
+  "storage_object_count": 0
+}

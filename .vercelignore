@@ -1,0 +1,10 @@
+.env*
+.local/
+.git/
+.next/
+.next-e2e/
+node_modules/
+playwright-report/
+test-results/
+coverage/
+*.log

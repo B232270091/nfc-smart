@@ -27,7 +27,7 @@ export const contentCopy = {
   secondaryColor: "Нэмэлт өнгө",
   logo: "Лого",
   cover: "Нүүр зураг",
-  imageHelp: "PNG, JPEG эсвэл WebP зураг, 5 MB хүртэл. Шинэ зураг сонгоогүй бол одоогийн зураг хадгалагдана.",
+  imageHelp: "PNG, JPEG эсвэл WebP зураг, тус бүр 2 MB хүртэл. Шинэ зураг сонгоогүй бол одоогийн зураг хадгалагдана.",
   activeOrganization: "Байгууллага идэвхтэй",
   inactiveHelp: "Идэвхгүй үед нийтэд нээлттэй хуудас болон NFC холбоос ажиллахгүй.",
   organizationProfile: "Байгууллагын мэдээлэл",

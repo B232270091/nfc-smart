@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-17",
+  "projectRef": "xcsnkvoulmrpxoxcjuvl",
+  "organizationId": "fsmtzwmlrfkqdhjxciww",
+  "organizationPlan": "free",
+  "productionWritesPerformed": false,
+  "backupExported": false,
+  "realBackupRestored": false,
+  "remoteCliMigrationDryRunExecuted": false,
+  "auth": {
+    "users": 2,
+    "identities": 2,
+    "usersWithPasswordHash": 2,
+    "emailConfirmedUsers": 2,
+    "sessions": 3,
+    "refreshTokens": 4,
+    "mfaFactors": 0,
+    "providers": [{"provider": "email", "count": 2}],
+    "tableCount": 27
+  },
+  "applicationTables": 0,
+  "migrationHistory": [],
+  "migrationHistoryTableExists": false,
+  "storage": {
+    "objectMetadataCount": 0,
+    "vectorBucketCount": 0,
+    "vectorIndexCount": 0,
+    "multipartUploadCount": 0,
+    "multipartPartCount": 0,
+    "policyCount": 0,
+    "buckets": [
+      {"id": "menu-images", "public": true, "fileSizeLimit": 5242880},
+      {"id": "organization-assets", "public": true, "fileSizeLimit": 2097152}
+    ]
+  },
+  "vaultSecretCount": 0,
+  "extensions": [
+    {"name": "plpgsql", "version": "1.0"},
+    {"name": "pg_stat_statements", "version": "1.11"},
+    {"name": "uuid-ossp", "version": "1.1"},
+    {"name": "pgcrypto", "version": "1.3"},
+    {"name": "supabase_vault", "version": "0.3.1"}
+  ],
+  "localPrerequisites": {
+    "databasePasswordAvailable": false,
+    "managementTokenAvailableInEnvironment": false,
+    "dockerOnPath": false,
+    "pgDumpOnPath": false,
+    "psqlOnPath": false
+  },
+  "cliDumpFixtureDryRuns": {
+    "cliVersion": "2.120.0",
+    "url": "localhost fixture only, never production",
+    "defaultSchemaExcludesAuthAndStorage": true,
+    "defaultDataIncludesAuthAndStorage": true,
+    "defaultDataExcludesMigrationHistoryAndVault": true,
+    "explicitAuthDataIncludesAuthExceptManagedSchemaMigrations": true,
+    "generatedScriptShowsReadOnlyOrTlsOptionsFromUrl": false,
+    "selectedExportMethod": "Native PostgreSQL 17 clients with explicit PGOPTIONS and TLS verification",
+    "warning": "db dump --dry-run prints PGPASSWORD; never run it with real credentials in captured output"
+  },
+  "dependencyAudit": {"runtime": 0, "developmentHighEntries": 5, "rootAdvisory": "GHSA-vfj7-8cjw-p6xm"}
+}
